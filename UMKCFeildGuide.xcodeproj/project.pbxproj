@@ -15,6 +15,30 @@
 		C8B2A4F7160A2D3A00CE9307 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B2A4F6160A2D3A00CE9307 /* main.m */; };
 		C8B2A4FB160A2D3A00CE9307 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B2A4FA160A2D3A00CE9307 /* AppDelegate.m */; };
 		C8B2A4FE160A2D3A00CE9307 /* UMKCFeildGuide.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C8B2A4FC160A2D3A00CE9307 /* UMKCFeildGuide.xcdatamodeld */; };
+		C8B2A505160A2F1F00CE9307 /* UMKCSplashPage-01.png in Resources */ = {isa = PBXBuildFile; fileRef = C8B2A504160A2F1F00CE9307 /* UMKCSplashPage-01.png */; };
+		C8B2A507160A2F2600CE9307 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C8B2A506160A2F2600CE9307 /* Default@2x.png */; };
+		C8B2A509160A2F2B00CE9307 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C8B2A508160A2F2B00CE9307 /* Default.png */; };
+		C8B2A50C160A312400CE9307 /* Logo-01.png in Resources */ = {isa = PBXBuildFile; fileRef = C8B2A50A160A312400CE9307 /* Logo-01.png */; };
+		C8B2A50D160A312400CE9307 /* Logo2x-01.png in Resources */ = {isa = PBXBuildFile; fileRef = C8B2A50B160A312400CE9307 /* Logo2x-01.png */; };
+		C8B2A50F160A312E00CE9307 /* Logo-01.png in Resources */ = {isa = PBXBuildFile; fileRef = C8B2A50E160A312E00CE9307 /* Logo-01.png */; };
+		C8B2A511160A313400CE9307 /* Logo2x-01.png in Resources */ = {isa = PBXBuildFile; fileRef = C8B2A510160A313400CE9307 /* Logo2x-01.png */; };
+		C8B2A516160A32A300CE9307 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B2A514160A32A300CE9307 /* DetailViewController.m */; };
+		C8B2A517160A32A300CE9307 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8B2A515160A32A300CE9307 /* DetailViewController.xib */; };
+		C8B2A519160A332C00CE9307 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B2A518160A332C00CE9307 /* CoreLocation.framework */; };
+		C8B2A51B160A333700CE9307 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B2A51A160A333700CE9307 /* MapKit.framework */; };
+		C8B2A51F160A372300CE9307 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B2A51D160A372300CE9307 /* MenuViewController.m */; };
+		C8B2A520160A372300CE9307 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8B2A51E160A372300CE9307 /* MenuViewController.xib */; };
+		C8B2A524160A413F00CE9307 /* ItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B2A522160A413E00CE9307 /* ItemViewController.m */; };
+		C8B2A525160A413F00CE9307 /* ItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8B2A523160A413E00CE9307 /* ItemViewController.xib */; };
+		C8B2A528160AD46200CE9307 /* DSItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B2A527160AD46200CE9307 /* DSItem.m */; };
+		C8B2A52B160AE22B00CE9307 /* DSItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B2A52A160AE22B00CE9307 /* DSItemStore.m */; };
+		C8B2A52D160AFD2300CE9307 /* MenuBackground-04.png in Resources */ = {isa = PBXBuildFile; fileRef = C8B2A52C160AFD2300CE9307 /* MenuBackground-04.png */; };
+		C8B2A52F160B006400CE9307 /* MenuBackground-02.png in Resources */ = {isa = PBXBuildFile; fileRef = C8B2A52E160B006400CE9307 /* MenuBackground-02.png */; };
+		C8B2A532160B69CC00CE9307 /* DSMapPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B2A531160B69CB00CE9307 /* DSMapPoint.m */; };
+		C8B2A536160B779700CE9307 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8B2A534160B779500CE9307 /* SettingsViewController.m */; };
+		C8B2A537160B779700CE9307 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8B2A535160B779600CE9307 /* SettingsViewController.xib */; };
+		C8B2A539160B9F6600CE9307 /* MenuOption2-02.png in Resources */ = {isa = PBXBuildFile; fileRef = C8B2A538160B9F6500CE9307 /* MenuOption2-02.png */; };
+		C8B2A53B160B9FCC00CE9307 /* MenuOption3-02.png in Resources */ = {isa = PBXBuildFile; fileRef = C8B2A53A160B9FCC00CE9307 /* MenuOption3-02.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +54,37 @@
 		C8B2A4F9160A2D3A00CE9307 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C8B2A4FA160A2D3A00CE9307 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C8B2A4FD160A2D3A00CE9307 /* UMKCFeildGuide.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UMKCFeildGuide.xcdatamodel; sourceTree = "<group>"; };
+		C8B2A504160A2F1F00CE9307 /* UMKCSplashPage-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "UMKCSplashPage-01.png"; sourceTree = "<group>"; };
+		C8B2A506160A2F2600CE9307 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		C8B2A508160A2F2B00CE9307 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		C8B2A50A160A312400CE9307 /* Logo-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo-01.png"; sourceTree = "<group>"; };
+		C8B2A50B160A312400CE9307 /* Logo2x-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo2x-01.png"; sourceTree = "<group>"; };
+		C8B2A50E160A312E00CE9307 /* Logo-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo-01.png"; sourceTree = "<group>"; };
+		C8B2A510160A313400CE9307 /* Logo2x-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo2x-01.png"; sourceTree = "<group>"; };
+		C8B2A513160A32A300CE9307 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		C8B2A514160A32A300CE9307 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		C8B2A515160A32A300CE9307 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		C8B2A518160A332C00CE9307 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C8B2A51A160A333700CE9307 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C8B2A51C160A372300CE9307 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		C8B2A51D160A372300CE9307 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		C8B2A51E160A372300CE9307 /* MenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
+		C8B2A521160A413E00CE9307 /* ItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemViewController.h; sourceTree = "<group>"; };
+		C8B2A522160A413E00CE9307 /* ItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemViewController.m; sourceTree = "<group>"; };
+		C8B2A523160A413E00CE9307 /* ItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemViewController.xib; sourceTree = "<group>"; };
+		C8B2A526160AD46200CE9307 /* DSItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSItem.h; sourceTree = "<group>"; };
+		C8B2A527160AD46200CE9307 /* DSItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSItem.m; sourceTree = "<group>"; };
+		C8B2A529160AE22A00CE9307 /* DSItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSItemStore.h; sourceTree = "<group>"; };
+		C8B2A52A160AE22B00CE9307 /* DSItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSItemStore.m; sourceTree = "<group>"; };
+		C8B2A52C160AFD2300CE9307 /* MenuBackground-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MenuBackground-04.png"; path = "../../../School/Mobile Programming/MenuBackground-04.png"; sourceTree = "<group>"; };
+		C8B2A52E160B006400CE9307 /* MenuBackground-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MenuBackground-02.png"; path = "../../../School/Mobile Programming/MenuBackground-02.png"; sourceTree = "<group>"; };
+		C8B2A530160B69C800CE9307 /* DSMapPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSMapPoint.h; sourceTree = "<group>"; };
+		C8B2A531160B69CB00CE9307 /* DSMapPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSMapPoint.m; sourceTree = "<group>"; };
+		C8B2A533160B779500CE9307 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		C8B2A534160B779500CE9307 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		C8B2A535160B779600CE9307 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		C8B2A538160B9F6500CE9307 /* MenuOption2-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MenuOption2-02.png"; path = "../../../School/Mobile Programming/MenuOption2-02.png"; sourceTree = "<group>"; };
+		C8B2A53A160B9FCC00CE9307 /* MenuOption3-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MenuOption3-02.png"; path = "../../../School/Mobile Programming/MenuOption3-02.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +92,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8B2A51B160A333700CE9307 /* MapKit.framework in Frameworks */,
+				C8B2A519160A332C00CE9307 /* CoreLocation.framework in Frameworks */,
 				C8B2A4E9160A2D3A00CE9307 /* UIKit.framework in Frameworks */,
 				C8B2A4EB160A2D3A00CE9307 /* Foundation.framework in Frameworks */,
 				C8B2A4ED160A2D3A00CE9307 /* CoreGraphics.framework in Frameworks */,
@@ -67,6 +124,8 @@
 		C8B2A4E7160A2D3A00CE9307 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C8B2A51A160A333700CE9307 /* MapKit.framework */,
+				C8B2A518160A332C00CE9307 /* CoreLocation.framework */,
 				C8B2A4E8160A2D3A00CE9307 /* UIKit.framework */,
 				C8B2A4EA160A2D3A00CE9307 /* Foundation.framework */,
 				C8B2A4EC160A2D3A00CE9307 /* CoreGraphics.framework */,
@@ -78,8 +137,27 @@
 		C8B2A4F0160A2D3A00CE9307 /* UMKCFeildGuide */ = {
 			isa = PBXGroup;
 			children = (
+				C8B2A512160A321500CE9307 /* Resource Files */,
 				C8B2A4F9160A2D3A00CE9307 /* AppDelegate.h */,
 				C8B2A4FA160A2D3A00CE9307 /* AppDelegate.m */,
+				C8B2A51C160A372300CE9307 /* MenuViewController.h */,
+				C8B2A51D160A372300CE9307 /* MenuViewController.m */,
+				C8B2A533160B779500CE9307 /* SettingsViewController.h */,
+				C8B2A534160B779500CE9307 /* SettingsViewController.m */,
+				C8B2A521160A413E00CE9307 /* ItemViewController.h */,
+				C8B2A522160A413E00CE9307 /* ItemViewController.m */,
+				C8B2A526160AD46200CE9307 /* DSItem.h */,
+				C8B2A527160AD46200CE9307 /* DSItem.m */,
+				C8B2A529160AE22A00CE9307 /* DSItemStore.h */,
+				C8B2A52A160AE22B00CE9307 /* DSItemStore.m */,
+				C8B2A530160B69C800CE9307 /* DSMapPoint.h */,
+				C8B2A531160B69CB00CE9307 /* DSMapPoint.m */,
+				C8B2A513160A32A300CE9307 /* DetailViewController.h */,
+				C8B2A514160A32A300CE9307 /* DetailViewController.m */,
+				C8B2A51E160A372300CE9307 /* MenuViewController.xib */,
+				C8B2A523160A413E00CE9307 /* ItemViewController.xib */,
+				C8B2A515160A32A300CE9307 /* DetailViewController.xib */,
+				C8B2A535160B779600CE9307 /* SettingsViewController.xib */,
 				C8B2A4FC160A2D3A00CE9307 /* UMKCFeildGuide.xcdatamodeld */,
 				C8B2A4F1160A2D3A00CE9307 /* Supporting Files */,
 			);
@@ -89,12 +167,31 @@
 		C8B2A4F1160A2D3A00CE9307 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C8B2A53A160B9FCC00CE9307 /* MenuOption3-02.png */,
+				C8B2A538160B9F6500CE9307 /* MenuOption2-02.png */,
+				C8B2A52E160B006400CE9307 /* MenuBackground-02.png */,
+				C8B2A52C160AFD2300CE9307 /* MenuBackground-04.png */,
+				C8B2A50A160A312400CE9307 /* Logo-01.png */,
+				C8B2A50B160A312400CE9307 /* Logo2x-01.png */,
+				C8B2A504160A2F1F00CE9307 /* UMKCSplashPage-01.png */,
 				C8B2A4F2160A2D3A00CE9307 /* UMKCFeildGuide-Info.plist */,
 				C8B2A4F3160A2D3A00CE9307 /* InfoPlist.strings */,
 				C8B2A4F6160A2D3A00CE9307 /* main.m */,
 				C8B2A4F8160A2D3A00CE9307 /* UMKCFeildGuide-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C8B2A512160A321500CE9307 /* Resource Files */ = {
+			isa = PBXGroup;
+			children = (
+				C8B2A510160A313400CE9307 /* Logo2x-01.png */,
+				C8B2A50E160A312E00CE9307 /* Logo-01.png */,
+				C8B2A508160A2F2B00CE9307 /* Default.png */,
+				C8B2A506160A2F2600CE9307 /* Default@2x.png */,
+			);
+			name = "Resource Files";
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +246,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8B2A4F5160A2D3A00CE9307 /* InfoPlist.strings in Resources */,
+				C8B2A505160A2F1F00CE9307 /* UMKCSplashPage-01.png in Resources */,
+				C8B2A507160A2F2600CE9307 /* Default@2x.png in Resources */,
+				C8B2A509160A2F2B00CE9307 /* Default.png in Resources */,
+				C8B2A50C160A312400CE9307 /* Logo-01.png in Resources */,
+				C8B2A50D160A312400CE9307 /* Logo2x-01.png in Resources */,
+				C8B2A50F160A312E00CE9307 /* Logo-01.png in Resources */,
+				C8B2A511160A313400CE9307 /* Logo2x-01.png in Resources */,
+				C8B2A517160A32A300CE9307 /* DetailViewController.xib in Resources */,
+				C8B2A520160A372300CE9307 /* MenuViewController.xib in Resources */,
+				C8B2A525160A413F00CE9307 /* ItemViewController.xib in Resources */,
+				C8B2A52D160AFD2300CE9307 /* MenuBackground-04.png in Resources */,
+				C8B2A52F160B006400CE9307 /* MenuBackground-02.png in Resources */,
+				C8B2A537160B779700CE9307 /* SettingsViewController.xib in Resources */,
+				C8B2A539160B9F6600CE9307 /* MenuOption2-02.png in Resources */,
+				C8B2A53B160B9FCC00CE9307 /* MenuOption3-02.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +274,13 @@
 				C8B2A4F7160A2D3A00CE9307 /* main.m in Sources */,
 				C8B2A4FB160A2D3A00CE9307 /* AppDelegate.m in Sources */,
 				C8B2A4FE160A2D3A00CE9307 /* UMKCFeildGuide.xcdatamodeld in Sources */,
+				C8B2A516160A32A300CE9307 /* DetailViewController.m in Sources */,
+				C8B2A51F160A372300CE9307 /* MenuViewController.m in Sources */,
+				C8B2A524160A413F00CE9307 /* ItemViewController.m in Sources */,
+				C8B2A528160AD46200CE9307 /* DSItem.m in Sources */,
+				C8B2A52B160AE22B00CE9307 /* DSItemStore.m in Sources */,
+				C8B2A532160B69CC00CE9307 /* DSMapPoint.m in Sources */,
+				C8B2A536160B779700CE9307 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

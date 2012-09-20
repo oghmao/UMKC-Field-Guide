@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "DetailViewController.h"
+#import "MenuViewController.h"
 
 @implementation AppDelegate
 
@@ -18,6 +20,15 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+//    DetailViewController* dvc = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
+    MenuViewController* mvc = [[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil];
+    
+    UINavigationController* nc = [[UINavigationController alloc] initWithRootViewController:mvc];
+    
+    
+    [[self window] setRootViewController:nc];
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
