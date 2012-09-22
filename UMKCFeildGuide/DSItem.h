@@ -36,5 +36,6 @@ typedef enum{
 @property (nonatomic, copy) NSString* roomName;
 @property (nonatomic) int floorNumber;
 @property (nonatomic, copy) NSString* buildingString;
+@property (nonatomic) BOOL isInTable;
 
 @end

@@ -10,11 +10,11 @@
 
 @implementation DSItem
 
-@synthesize itemName, latitude, longitude, bldgName, floorNumber, roomName, buildingString;
+@synthesize itemName, latitude, longitude, bldgName, floorNumber, roomName, buildingString, isInTable;
 
 +(DSItem*) randomItem{
     
-    int randomBldg = rand() % 4;
+    int randomBldg = rand() % 5;
     
     DSItem* newItem = [[DSItem alloc] initWithItemName:@"Random Location" lat:39.5 lon:-94.578 bldg:randomBldg room:@"350" floor:3];
     
@@ -69,6 +69,7 @@
             default:
                 break;
         }
+        [self setIsInTable:NO];
     }
     
     // Return the address of the newly initialized object

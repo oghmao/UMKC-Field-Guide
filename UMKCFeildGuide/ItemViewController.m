@@ -62,57 +62,58 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 5;
+    return 1;
 }
 
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if (section == 0) {
-        int blgdCount = 0;
-        for (int i = 0; i < [[[DSItemStore sharedStore] allItems] count]; ++i) {
-            DSItem* current = [[[DSItemStore sharedStore] allItems] objectAtIndex:i];
-            if (current.bldgName == Flarsheim) {
-                blgdCount++;
-            }
-        }
-        return blgdCount;
-    }else if (section == 1) {
-        int blgdCount = 0;
-        for (int i = 0; i < [[[DSItemStore sharedStore] allItems] count]; ++i) {
-            DSItem* current = [[[DSItemStore sharedStore] allItems] objectAtIndex:i];
-            if (current.bldgName == Haag) {
-                blgdCount++;
-            }
-        }
-        return blgdCount;
-    }else if (section == 2) {
-        int blgdCount = 0;
-        for (int i = 0; i < [[[DSItemStore sharedStore] allItems] count]; ++i) {
-            DSItem* current = [[[DSItemStore sharedStore] allItems] objectAtIndex:i];
-            if (current.bldgName == Royal) {
-                blgdCount++;
-            }
-        }
-        return blgdCount;
-    }else if (section == 3) {
-        int blgdCount = 0;
-        for (int i = 0; i < [[[DSItemStore sharedStore] allItems] count]; ++i) {
-            DSItem* current = [[[DSItemStore sharedStore] allItems] objectAtIndex:i];
-            if (current.bldgName == Katz) {
-                blgdCount++;
-            }
-        }
-        return blgdCount;
-    }else if (section == 4) {
-        int blgdCount = 0;
-        for (int i = 0; i < [[[DSItemStore sharedStore] allItems] count]; ++i) {
-            DSItem* current = [[[DSItemStore sharedStore] allItems] objectAtIndex:i];
-            if (current.bldgName == Scofield) {
-                blgdCount++;
-            }
-        }
-        return blgdCount;
-    }else
-        return 1;
+//    if (section == 0) {
+//        int blgdCount = 0;
+//        for (int i = 0; i < [[[DSItemStore sharedStore] allItems] count]; ++i) {
+//            DSItem* current = [[[DSItemStore sharedStore] allItems] objectAtIndex:i];
+//            if (current.bldgName == Flarsheim) {
+//                blgdCount++;
+//            }
+//        }
+//        return blgdCount;
+//    }else if (section == 1) {
+//        int blgdCount = 0;
+//        for (int i = 0; i < [[[DSItemStore sharedStore] allItems] count]; ++i) {
+//            DSItem* current = [[[DSItemStore sharedStore] allItems] objectAtIndex:i];
+//            if (current.bldgName == Haag) {
+//                blgdCount++;
+//            }
+//        }
+//        return blgdCount;
+//    }else if (section == 2) {
+//        int blgdCount = 0;
+//        for (int i = 0; i < [[[DSItemStore sharedStore] allItems] count]; ++i) {
+//            DSItem* current = [[[DSItemStore sharedStore] allItems] objectAtIndex:i];
+//            if (current.bldgName == Royal) {
+//                blgdCount++;
+//            }
+//        }
+//        return blgdCount;
+//    }else if (section == 3) {
+//        int blgdCount = 0;
+//        for (int i = 0; i < [[[DSItemStore sharedStore] allItems] count]; ++i) {
+//            DSItem* current = [[[DSItemStore sharedStore] allItems] objectAtIndex:i];
+//            if (current.bldgName == Katz) {
+//                blgdCount++;
+//            }
+//        }
+//        return blgdCount;
+//    }else if (section == 4) {
+//        int blgdCount = 0;
+//        for (int i = 0; i < [[[DSItemStore sharedStore] allItems] count]; ++i) {
+//            DSItem* current = [[[DSItemStore sharedStore] allItems] objectAtIndex:i];
+//            if (current.bldgName == Scofield) {
+//                blgdCount++;
+//            }
+//        }
+//        return blgdCount;
+//    }else
+//        return 1;
+    return [[[DSItemStore sharedStore] allItems] count];
 }
 
 -(UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -122,20 +123,29 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"UITableViewCell"];
     }
-    static int counter = 0;
-    if (counter >= [[[DSItemStore sharedStore] allItems] count]) {
-        counter = 0;
-    }
-    DSItem* p = [[[DSItemStore sharedStore] allItems] objectAtIndex:counter];
-    
-        counter++;
-    
-    if (p.bldgName == indexPath.section) {
-        [[cell textLabel] setText:[p itemName]];
-        [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%@ room: %@", [p buildingString], [p roomName]]];
-    }
-//    [[cell textLabel] setText:[p itemName]];
-//    [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%@ room: %@", [p buildingString], [p roomName]]];
+//    static int counter = 0;
+//    
+//    if (counter >= [[[DSItemStore sharedStore] allItems] count]) {
+//        counter = 0;
+//    }
+    DSItem* p = [[[DSItemStore sharedStore] allItems] objectAtIndex:[indexPath row]];
+//    
+//        counter++;
+//    
+//    for (int i = 0; i < [[[DSItemStore sharedStore] allItems] count]; ++i) {
+//        if (p.bldgName == indexPath.section && !p.isInTable) {
+//            [[cell textLabel] setText:[p itemName]];
+//            [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%@ room: %@", [p buildingString], [p roomName]]];
+//            p.isInTable = YES;
+//            break;
+//        }
+//    }
+//    if (p.bldgName == indexPath.section) {
+//        [[cell textLabel] setText:[p itemName]];
+//        [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%@ room: %@", [p buildingString], [p roomName]]];
+//    }
+    [[cell textLabel] setText:[p itemName]];
+    [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%@ room: %@", [p buildingString], [p roomName]]];
     
     return cell;
 }
