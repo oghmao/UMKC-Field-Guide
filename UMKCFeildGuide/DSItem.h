@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum{
+    Flarsheim,
+    Haag,
+    Royal,
+    Katz,
+    Scofield    
+}BuildingName;
+
 @interface DSItem : NSObject{
     
 }
@@ -17,15 +25,16 @@
 - (id)initWithItemName:(NSString *)name
                    lat:(double) lat
                    lon:(double) lon
-                  bldg:(NSString*) bldg
+                  bldg:(BuildingName) bldg
                   room:(NSString*) room
                  floor:(int) floor;
 
 @property (nonatomic, copy) NSString* itemName;
 @property (nonatomic) double latitude;
 @property (nonatomic) double longitude;
-@property (nonatomic, copy) NSString* bldgName;
+@property (nonatomic) BuildingName bldgName;
 @property (nonatomic, copy) NSString* roomName;
 @property (nonatomic) int floorNumber;
+@property (nonatomic, copy) NSString* buildingString;
 
 @end

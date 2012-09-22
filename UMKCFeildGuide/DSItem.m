@@ -10,10 +10,13 @@
 
 @implementation DSItem
 
-@synthesize itemName, latitude, longitude, bldgName, floorNumber, roomName;
+@synthesize itemName, latitude, longitude, bldgName, floorNumber, roomName, buildingString;
 
 +(DSItem*) randomItem{
-    DSItem* newItem = [[DSItem alloc] initWithItemName:@"Random Location" lat:39.5 lon:-94.578 bldg:@"Flarsheim" room:@"350" floor:3];
+    
+    int randomBldg = rand() % 4;
+    
+    DSItem* newItem = [[DSItem alloc] initWithItemName:@"Random Location" lat:39.5 lon:-94.578 bldg:randomBldg room:@"350" floor:3];
     
     return newItem;
 }
@@ -23,13 +26,13 @@
     return [self initWithItemName:@"Possession"
                               lat:0.0
                               lon:0.0
-            bldg:@"N/A" room:@"N/A" floor:0];
+            bldg:0 room:@"N/A" floor:0];
 }
 
 - (id)initWithItemName:(NSString *)name
                    lat:(double) lat
                    lon:(double) lon
-                  bldg:(NSString*) bldg
+                  bldg:(BuildingName) bldg
                   room:(NSString*) room
                  floor:(int) floor{
     
@@ -45,6 +48,27 @@
         [self setBldgName:bldg];
         [self setFloorNumber:floor];
         [self setRoomName:room];
+        
+        switch (bldgName) {
+            case 0:
+                [self setBuildingString:@"Flarsheim"];
+                break;
+            case 1:
+                [self setBuildingString:@"Haag"];
+                break;
+            case 2:
+                [self setBuildingString:@"Royal"];
+                break;
+            case 3:
+                [self setBuildingString:@"Katz"];
+                break;
+            case 4:
+                [self setBuildingString:@"Scofield"];
+                break;
+                
+            default:
+                break;
+        }
     }
     
     // Return the address of the newly initialized object

@@ -25,6 +25,8 @@
     MenuViewController* mvc = [[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil];
     
     UINavigationController* nc = [[UINavigationController alloc] initWithRootViewController:mvc];
+    srand(time(NULL));
+
     
     
     [[self window] setRootViewController:nc];

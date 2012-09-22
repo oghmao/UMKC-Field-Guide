@@ -26,12 +26,12 @@
         [[self navigationController] setTitle:@"Home"];
         [[self navigationController] setNavigationBarHidden:YES animated:NO];
         [[self navigationController] setNavigationBarHidden:YES animated:NO];
-        UIImageView *backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MenuOption3-02.png"]];
+        UIImageView *backgroundImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"UMKC-02.png"]];
         
         [[self view] addSubview:backgroundImage];
         [[self view] sendSubviewToBack:backgroundImage];
         
-        for (int i = 0; i < 5; ++i) {
+        for (int i = 0; i < 25; ++i) {
             [[DSItemStore sharedStore] createItem];
         }
     }

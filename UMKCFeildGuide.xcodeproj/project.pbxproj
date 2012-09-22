@@ -39,6 +39,7 @@
 		C8B2A537160B779700CE9307 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C8B2A535160B779600CE9307 /* SettingsViewController.xib */; };
 		C8B2A539160B9F6600CE9307 /* MenuOption2-02.png in Resources */ = {isa = PBXBuildFile; fileRef = C8B2A538160B9F6500CE9307 /* MenuOption2-02.png */; };
 		C8B2A53B160B9FCC00CE9307 /* MenuOption3-02.png in Resources */ = {isa = PBXBuildFile; fileRef = C8B2A53A160B9FCC00CE9307 /* MenuOption3-02.png */; };
+		C8B2A53D160D203A00CE9307 /* UMKC-02.png in Resources */ = {isa = PBXBuildFile; fileRef = C8B2A53C160D203A00CE9307 /* UMKC-02.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +86,7 @@
 		C8B2A535160B779600CE9307 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
 		C8B2A538160B9F6500CE9307 /* MenuOption2-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MenuOption2-02.png"; path = "../../../School/Mobile Programming/MenuOption2-02.png"; sourceTree = "<group>"; };
 		C8B2A53A160B9FCC00CE9307 /* MenuOption3-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MenuOption3-02.png"; path = "../../../School/Mobile Programming/MenuOption3-02.png"; sourceTree = "<group>"; };
+		C8B2A53C160D203A00CE9307 /* UMKC-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "UMKC-02.png"; path = "../../../School/Mobile Programming/UMKC-02.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 		C8B2A4F1160A2D3A00CE9307 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C8B2A53C160D203A00CE9307 /* UMKC-02.png */,
 				C8B2A53A160B9FCC00CE9307 /* MenuOption3-02.png */,
 				C8B2A538160B9F6500CE9307 /* MenuOption2-02.png */,
 				C8B2A52E160B006400CE9307 /* MenuBackground-02.png */,
@@ -261,6 +264,7 @@
 				C8B2A537160B779700CE9307 /* SettingsViewController.xib in Resources */,
 				C8B2A539160B9F6600CE9307 /* MenuOption2-02.png in Resources */,
 				C8B2A53B160B9FCC00CE9307 /* MenuOption3-02.png in Resources */,
+				C8B2A53D160D203A00CE9307 /* UMKC-02.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
