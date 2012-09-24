@@ -22,6 +22,9 @@
     self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
         // Custom initialization
+        userLocationManager = [[CLLocationManager alloc] init];
+        [userLocationManager setDelegate:self];
+        [userLocationManager setDesiredAccuracy:kCLLocationAccuracyBest];
                 
     }
     return self;
@@ -123,29 +126,18 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"UITableViewCell"];
     }
-//    static int counter = 0;
-//    
-//    if (counter >= [[[DSItemStore sharedStore] allItems] count]) {
-//        counter = 0;
-//    }
+    
+    [userLocationManager startUpdatingLocation];
+
     DSItem* p = [[[DSItemStore sharedStore] allItems] objectAtIndex:[indexPath row]];
-//    
-//        counter++;
-//    
-//    for (int i = 0; i < [[[DSItemStore sharedStore] allItems] count]; ++i) {
-//        if (p.bldgName == indexPath.section && !p.isInTable) {
-//            [[cell textLabel] setText:[p itemName]];
-//            [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%@ room: %@", [p buildingString], [p roomName]]];
-//            p.isInTable = YES;
-//            break;
-//        }
-//    }
-//    if (p.bldgName == indexPath.section) {
-//        [[cell textLabel] setText:[p itemName]];
-//        [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%@ room: %@", [p buildingString], [p roomName]]];
-//    }
+    CLLocation* currentLoc = userLocationManager.location;
+    CLLocation* cellLocation = [[CLLocation alloc] initWithLatitude:p.latitude longitude:p.longitude];
+    CLLocationDistance distance = [currentLoc distanceFromLocation:cellLocation];
+    
     [[cell textLabel] setText:[p itemName]];
-    [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%@ room: %@", [p buildingString], [p roomName]]];
+    [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%@ room: %@", [NSString stringWithFormat:@"%0.1f m", distance/1000], [p roomName]]];
+    
+    [userLocationManager stopUpdatingLocation];
     
     return cell;
 }
@@ -204,6 +196,10 @@
      // Pass the selected object to the new view controller.
      [[self navigationController] pushViewController:detailViewController animated:YES];
      
+}
+
+-(void) dealloc{
+    [userLocationManager setDelegate:nil];
 }
 
 @end

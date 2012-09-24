@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
 typedef enum{
     Flarsheim,
@@ -37,5 +38,6 @@ typedef enum{
 @property (nonatomic) int floorNumber;
 @property (nonatomic, copy) NSString* buildingString;
 @property (nonatomic) BOOL isInTable;
+@property (nonatomic) CLLocationCoordinate2D location;
 
 @end

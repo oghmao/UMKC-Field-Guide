@@ -10,13 +10,13 @@
 
 @implementation DSItem
 
-@synthesize itemName, latitude, longitude, bldgName, floorNumber, roomName, buildingString, isInTable;
+@synthesize itemName, latitude, longitude, bldgName, floorNumber, roomName, buildingString, isInTable, location;
 
 +(DSItem*) randomItem{
     
     int randomBldg = rand() % 5;
     
-    DSItem* newItem = [[DSItem alloc] initWithItemName:@"Random Location" lat:39.5 lon:-94.578 bldg:randomBldg room:@"350" floor:3];
+    DSItem* newItem = [[DSItem alloc] initWithItemName:@"Random Location" lat:(rand() % 39) lon:(-1 * (rand() % 150)) bldg:randomBldg room:[NSString stringWithFormat:@"%i",(rand() % 50)] floor:3];
     
     return newItem;
 }
@@ -70,6 +70,7 @@
                 break;
         }
         [self setIsInTable:NO];
+        location = CLLocationCoordinate2DMake(latitude, longitude);
     }
     
     // Return the address of the newly initialized object

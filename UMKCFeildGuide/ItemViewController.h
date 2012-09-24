@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface ItemViewController : UITableViewController{
+@interface ItemViewController : UITableViewController <CLLocationManagerDelegate>{
     NSString* name;
-    
+    CLLocationManager* userLocationManager;
 }
 
 @end

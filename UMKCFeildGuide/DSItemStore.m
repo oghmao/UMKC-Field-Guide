@@ -42,8 +42,8 @@
     
     [allItems addObject:p];
     
-    NSSortDescriptor *sorter = [[NSSortDescriptor alloc] initWithKey:@"bldgName" ascending:YES];
-    [allItems sortUsingDescriptors:[NSArray arrayWithObject:sorter]];
+//    NSSortDescriptor *sorter = [[NSSortDescriptor alloc] initWithKey:@"location" ascending:YES];
+//    [allItems sortUsingDescriptors:[NSArray arrayWithObject:sorter]];
     
     return p;
 }
