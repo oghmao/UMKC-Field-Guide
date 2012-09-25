@@ -38,6 +38,6 @@ typedef enum{
 @property (nonatomic) int floorNumber;
 @property (nonatomic, copy) NSString* buildingString;
 @property (nonatomic) BOOL isInTable;
-@property (nonatomic) CLLocationCoordinate2D location;
+@property (nonatomic) CLLocationDistance distance;
 
 @end
