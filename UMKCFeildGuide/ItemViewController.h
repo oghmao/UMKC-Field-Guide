@@ -7,15 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#include <MapKit/MapKit.h>
+#import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
-
 
 @interface ItemViewController : UITableViewController <CLLocationManagerDelegate>{
     NSString* name;
     CLLocationManager* userLocationManager;
 }
-
-//-(void) sortTableFromEnd:(NSInteger *)indexPath;
 
 @end

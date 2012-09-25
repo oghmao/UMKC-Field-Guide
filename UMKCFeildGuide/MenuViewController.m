@@ -51,9 +51,6 @@
     [[self navigationController] setNavigationBarHidden:YES animated:YES];
 
 }
--(void) viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:YES];
-}
 
 - (void)viewDidUnload
 {

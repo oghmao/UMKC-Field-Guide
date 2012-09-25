@@ -28,7 +28,6 @@
     
     if (self) {
         allItems = [[NSMutableArray alloc]init];
-        [userLocationManager setDelegate:self];
     }
     
     return self;
@@ -39,41 +38,12 @@
 }
 
 -(DSItem*) createItem{
-    [userLocationManager startUpdatingLocation];
-
     DSItem* p = [DSItem randomItem];
-    
-    
-    CLLocation* currentLoc = userLocationManager.location;
-    CLLocation* cellLocation = [[CLLocation alloc] initWithLatitude:p.latitude longitude:p.longitude];
-    CLLocationDistance distance = [currentLoc distanceFromLocation:cellLocation];
-    [p setDistance:distance];
     
     [allItems addObject:p];
     
-    NSMutableArray* array = [[NSMutableArray alloc] initWithArray:allItems];
-    
-    NSComparator comp = ^(DSItem* a, DSItem* b){
-        if ([a distance] > [b distance]) {
-            return (NSComparisonResult)NSOrderedDescending;
-        }
-        
-        if ([a distance] < [a distance]) {
-            return (NSComparisonResult)NSOrderedAscending;
-        }
-        return (NSComparisonResult)NSOrderedSame;
-    };
-    
-    
-
-    NSUInteger newIndex = [allItems indexOfObject:p
-                                 inSortedRange:(NSRange){0, [allItems count]}
-                                       options:NSBinarySearchingInsertionIndex
-                               usingComparator:comp];
-    
-    [array insertObject:p atIndex:newIndex];
-    
-    
+//    NSSortDescriptor *sorter = [[NSSortDescriptor alloc] initWithKey:@"location" ascending:YES];
+//    [allItems sortUsingDescriptors:[NSArray arrayWithObject:sorter]];
     
     return p;
 }
@@ -92,10 +62,6 @@
     
     [allItems removeObjectAtIndex:from];
     [allItems insertObject:p atIndex:to];
-}
-
--(void) dealloc{
-    [userLocationManager stopUpdatingLocation];
 }
 
 @end

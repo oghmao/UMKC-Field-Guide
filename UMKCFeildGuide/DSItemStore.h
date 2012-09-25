@@ -7,18 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <MapKit/MapKit.h>
-#import <CoreLocation/CoreLocation.h>
 
 @class DSItem;
 
-@interface DSItemStore : NSObject <CLLocationManagerDelegate>{
+@interface DSItemStore : NSObject{
     NSMutableArray* allItems;
-    CLLocationManager* userLocationManager;
+    
 }
 
 +(DSItemStore*) sharedStore;
--(NSMutableArray*) allItems;
+-(NSArray*) allItems;
 -(DSItem*) createItem;
 -(void) removeItem:(DSItem*) p;
 -(void) moveItemsAtIndex:(int) from
