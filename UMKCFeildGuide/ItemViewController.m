@@ -35,6 +35,7 @@
     [super viewDidLoad];
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
     self.view.backgroundColor = [UIColor colorWithRed:0.1412 green:.6706 blue:.8902 alpha:1.0];
+    [userLocationManager startUpdatingLocation];
 
 
     // Uncomment the following line to preserve selection between presentations.
@@ -120,6 +121,7 @@
 }
 
 -(UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
@@ -127,27 +129,42 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"UITableViewCell"];
     }
     
-    [userLocationManager startUpdatingLocation];
 
     DSItem* p = [[[DSItemStore sharedStore] allItems] objectAtIndex:[indexPath row]];
     CLLocation* currentLoc = userLocationManager.location;
     CLLocation* cellLocation = [[CLLocation alloc] initWithLatitude:p.latitude longitude:p.longitude];
     CLLocationDistance distance = [currentLoc distanceFromLocation:cellLocation];
+    p.distance = distance;
+    
+    
+    
+    //[self sortTableFromEnd:indexPath];
+    
     
     [[cell textLabel] setText:[p itemName]];
-    [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%@ room: %@", [NSString stringWithFormat:@"%0.1f m", distance/1000], [p roomName]]];
+    [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%0.1f m room: %@", p.distance/1000, [p roomName]]];
     
-    [userLocationManager stopUpdatingLocation];
     
     return cell;
 }
+
+//-(void) sortTableFromEnd:(NSIndexPath *)indexPath{
+//    for (int i = [indexPath row]; i > 0; --i) {
+//        DSItem* p = [[[DSItemStore sharedStore] allItems] objectAtIndex:i];
+//        DSItem* q = [[[DSItemStore sharedStore] allItems] objectAtIndex:i-1];        
+//    
+//        if (p.distance < q.distance) {
+//            [[[DSItemStore sharedStore] allItems] exchangeObjectAtIndex:i withObjectAtIndex:i-1];
+//        }
+//    }
+//}
 
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
-    return YES;
+    return YES
 }
 */
 
@@ -199,6 +216,7 @@
 }
 
 -(void) dealloc{
+    [userLocationManager stopUpdatingLocation];
     [userLocationManager setDelegate:nil];
 }
 
