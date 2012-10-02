@@ -27,6 +27,7 @@
     self = [super init];
     
     if (self) {
+        srand(time(NULL));
         allItems = [[NSMutableArray alloc]init];
     }
     

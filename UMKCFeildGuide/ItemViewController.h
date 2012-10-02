@@ -13,6 +13,9 @@
 @interface ItemViewController : UITableViewController <CLLocationManagerDelegate>{
     NSString* name;
     CLLocationManager* userLocationManager;
+    NSArray* tableList;
 }
+
+@property (nonatomic, copy) NSArray* tableList;
 
 @end

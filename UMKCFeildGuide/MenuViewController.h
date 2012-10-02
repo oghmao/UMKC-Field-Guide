@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#include <CoreLocation/CoreLocation.h>
 
-@interface MenuViewController : UIViewController{
-    
+@interface MenuViewController : UIViewController <CLLocationManagerDelegate>{
+    CLLocationManager* userLocationManager;
 }
 
 -(IBAction)didSelectCategory:(id)sender;

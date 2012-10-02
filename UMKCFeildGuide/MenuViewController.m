@@ -34,6 +34,10 @@
         for (int i = 0; i < 25; ++i) {
             [[DSItemStore sharedStore] createItem];
         }
+        
+        userLocationManager = [[CLLocationManager alloc] init];
+        [userLocationManager setDelegate:self];
+        [userLocationManager setDesiredAccuracy:kCLLocationAccuracyBest];
     }
     return self;
 }
@@ -42,6 +46,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    [userLocationManager startUpdatingLocation];
+
     
 
 }
@@ -57,6 +63,8 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+    [userLocationManager stopUpdatingLocation];
+
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -66,6 +74,7 @@
 
 -(IBAction)didSelectCategory:(id)sender{
     ItemViewController* ivc = [[ItemViewController alloc] init];
+    ivc.tableList = [[DSItemStore sharedStore]allItems];
     
     [ivc setTitle:[[sender titleLabel] text]];
     
