@@ -36,7 +36,6 @@
     [super viewDidLoad];
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
     self.view.backgroundColor = [UIColor colorWithRed:0.1412 green:.6706 blue:.8902 alpha:1.0];
-<<<<<<< HEAD
 //    [userLocationManager startUpdatingLocation];
 //    for (int i = 0; i < [[DSItemStore sharedStore] allItems].count; ++i) {
 //        DSItem* p = [[[DSItemStore sharedStore] allItems] objectAtIndex:i];
@@ -62,9 +61,7 @@
 //            }];
 //    
 //    [userLocationManager stopUpdatingLocation];
-=======
     [userLocationManager startUpdatingLocation];
->>>>>>> e73ed4f6349f9edd7664f0f522289c0952336535
 
 
     // Uncomment the following line to preserve selection between presentations.
@@ -192,16 +189,12 @@
     }
     
 
-<<<<<<< HEAD
     DSItem* p = [tableList objectAtIndex:[indexPath row]];
-=======
-    DSItem* p = [[[DSItemStore sharedStore] allItems] objectAtIndex:[indexPath row]];
->>>>>>> e73ed4f6349f9edd7664f0f522289c0952336535
+    //DSItem* p = [[[DSItemStore sharedStore] allItems] objectAtIndex:[indexPath row]];
 //    CLLocation* currentLoc = userLocationManager.location;
 //    CLLocation* cellLocation = [[CLLocation alloc] initWithLatitude:p.latitude longitude:p.longitude];
 //    CLLocationDistance distance = [currentLoc distanceFromLocation:cellLocation];
 //    p.distance = distance;
-<<<<<<< HEAD
 //    
     
     
@@ -210,7 +203,6 @@
     
     [[cell textLabel] setText:[p itemName]];
     [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%0.1f m room: %@", p.distance/1000, [p roomName]]];
-=======
     
     
     //[self sortTableFromEnd:indexPath];
@@ -219,12 +211,11 @@
     [[cell textLabel] setText:[p itemName]];
     [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%0.1f m room: %@", p.distance/1000, [p roomName]]];
     
->>>>>>> e73ed4f6349f9edd7664f0f522289c0952336535
+
     
     return cell;
 }
 
-<<<<<<< HEAD
 -(void) locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation{
     // How many seconds ago was this new location created?
     NSTimeInterval t = [[newLocation timestamp] timeIntervalSinceNow];
@@ -236,7 +227,7 @@
         // This is cached data, you don't want it, keep looking
         return;
     }
-=======
+}
 //-(void) sortTableFromEnd:(NSIndexPath *)indexPath{
 //    for (int i = [indexPath row]; i > 0; --i) {
 //        DSItem* p = [[[DSItemStore sharedStore] allItems] objectAtIndex:i];
@@ -268,9 +259,8 @@
     else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
->>>>>>> e73ed4f6349f9edd7664f0f522289c0952336535
 }
-
+*/
 
 
 #pragma mark - Table view delegate

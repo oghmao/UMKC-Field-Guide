@@ -17,10 +17,7 @@
     NSArray* tableList;
 }
 
-<<<<<<< HEAD
 @property (nonatomic, copy) NSArray* tableList;
-=======
 //-(void) sortTableFromEnd:(NSInteger *)indexPath;
->>>>>>> e73ed4f6349f9edd7664f0f522289c0952336535
 
 @end
