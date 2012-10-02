@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#include <CoreLocation/CoreLocation.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface MenuViewController : UIViewController <CLLocationManagerDelegate>{
     CLLocationManager* userLocationManager;
