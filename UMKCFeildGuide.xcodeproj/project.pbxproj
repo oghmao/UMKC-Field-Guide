@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C8A14DF51614FA680039985C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C8A14DF41614FA680039985C /* Default.png */; };
-		C8A14DF71614FA790039985C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C8A14DF61614FA790039985C /* Default@2x.png */; };
 		C8B2A4E9160A2D3A00CE9307 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B2A4E8160A2D3A00CE9307 /* UIKit.framework */; };
 		C8B2A4EB160A2D3A00CE9307 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B2A4EA160A2D3A00CE9307 /* Foundation.framework */; };
 		C8B2A4ED160A2D3A00CE9307 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B2A4EC160A2D3A00CE9307 /* CoreGraphics.framework */; };
@@ -40,6 +39,9 @@
 		C8B2A539160B9F6600CE9307 /* MenuOption2-02.png in Resources */ = {isa = PBXBuildFile; fileRef = C8B2A538160B9F6500CE9307 /* MenuOption2-02.png */; };
 		C8B2A53B160B9FCC00CE9307 /* MenuOption3-02.png in Resources */ = {isa = PBXBuildFile; fileRef = C8B2A53A160B9FCC00CE9307 /* MenuOption3-02.png */; };
 		C8B2A53D160D203A00CE9307 /* UMKC-02.png in Resources */ = {isa = PBXBuildFile; fileRef = C8B2A53C160D203A00CE9307 /* UMKC-02.png */; };
+		C8CE9F96161DF1DB0093893B /* bldg-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C8CE9F95161DF1DB0093893B /* bldg-icon.png */; };
+		C8CE9F99161DF3AF0093893B /* bldg-icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = C8CE9F98161DF3AF0093893B /* bldg-icon2.png */; };
+		C8CE9F9B161DF7860093893B /* parking-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C8CE9F9A161DF7860093893B /* parking-icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +89,9 @@
 		C8B2A538160B9F6500CE9307 /* MenuOption2-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MenuOption2-02.png"; path = "../../../School/Mobile Programming/MenuOption2-02.png"; sourceTree = "<group>"; };
 		C8B2A53A160B9FCC00CE9307 /* MenuOption3-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MenuOption3-02.png"; path = "../../../School/Mobile Programming/MenuOption3-02.png"; sourceTree = "<group>"; };
 		C8B2A53C160D203A00CE9307 /* UMKC-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "UMKC-02.png"; path = "../../../School/Mobile Programming/UMKC-02.png"; sourceTree = "<group>"; };
+		C8CE9F95161DF1DB0093893B /* bldg-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bldg-icon.png"; path = "../bldg-icon.png"; sourceTree = "<group>"; };
+		C8CE9F98161DF3AF0093893B /* bldg-icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bldg-icon2.png"; sourceTree = "<group>"; };
+		C8CE9F9A161DF7860093893B /* parking-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "parking-icon.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,8 +114,6 @@
 		C8B2A4D9160A2D3A00CE9307 = {
 			isa = PBXGroup;
 			children = (
-				C8A14DF61614FA790039985C /* Default@2x.png */,
-				C8A14DF41614FA680039985C /* Default.png */,
 				C8B2A4F0160A2D3A00CE9307 /* UMKCFeildGuide */,
 				C8B2A4E7160A2D3A00CE9307 /* Frameworks */,
 				C8B2A4E5160A2D3A00CE9307 /* Products */,
@@ -171,6 +174,9 @@
 		C8B2A4F1160A2D3A00CE9307 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C8CE9F9A161DF7860093893B /* parking-icon.png */,
+				C8CE9F98161DF3AF0093893B /* bldg-icon2.png */,
+				C8CE9F95161DF1DB0093893B /* bldg-icon.png */,
 				C8B2A53C160D203A00CE9307 /* UMKC-02.png */,
 				C8B2A53A160B9FCC00CE9307 /* MenuOption3-02.png */,
 				C8B2A538160B9F6500CE9307 /* MenuOption2-02.png */,
@@ -190,6 +196,8 @@
 		C8B2A512160A321500CE9307 /* Resource Files */ = {
 			isa = PBXGroup;
 			children = (
+				C8A14DF61614FA790039985C /* Default@2x.png */,
+				C8A14DF41614FA680039985C /* Default.png */,
 				C8B2A510160A313400CE9307 /* Logo2x-01.png */,
 				C8B2A50E160A312E00CE9307 /* Logo-01.png */,
 			);
@@ -264,7 +272,9 @@
 				C8B2A53B160B9FCC00CE9307 /* MenuOption3-02.png in Resources */,
 				C8B2A53D160D203A00CE9307 /* UMKC-02.png in Resources */,
 				C8A14DF51614FA680039985C /* Default.png in Resources */,
-				C8A14DF71614FA790039985C /* Default@2x.png in Resources */,
+				C8CE9F96161DF1DB0093893B /* bldg-icon.png in Resources */,
+				C8CE9F99161DF3AF0093893B /* bldg-icon2.png in Resources */,
+				C8CE9F9B161DF7860093893B /* parking-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

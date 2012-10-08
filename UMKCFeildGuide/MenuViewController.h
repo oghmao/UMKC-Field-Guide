@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import <MapKit/MapKit.h>
 
-@interface MenuViewController : UIViewController <CLLocationManagerDelegate>{
+@interface MenuViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>{
     CLLocationManager* userLocationManager;
+    IBOutlet MKMapView* mapview;
+    
 }
 
 -(IBAction)didSelectCategory:(id)sender;
