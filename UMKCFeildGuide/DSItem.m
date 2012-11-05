@@ -10,7 +10,7 @@
 
 @implementation DSItem
 
-@synthesize itemName, latitude, longitude, bldgName, floorNumber, roomName, buildingString, isInTable, distance;
+@synthesize name, latitude, longitude, bldgName, floorNumber, roomName, buildingString, isInTable, distance;
 
 +(DSItem*) randomItem{
     
@@ -31,7 +31,7 @@
             bldg:0 room:@"N/A" floor:0];
 }
 
-- (id)initWithItemName:(NSString *)name
+- (id)initWithItemName:(NSString *)itemName
                    lat:(double) lat
                    lon:(double) lon
                   bldg:(BuildingName) bldg
@@ -44,7 +44,7 @@
     // Did the superclass's designated initializer succeed?
     if(self) {
         // Give the instance variables initial values
-        [self setItemName:name];
+        [self setName:itemName];
         [self setLatitude:lat];
         [self setLongitude:lon];
         [self setBldgName:bldg];

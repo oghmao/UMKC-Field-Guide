@@ -201,14 +201,14 @@
     //[self sortTableFromEnd:indexPath];
     
     
-    [[cell textLabel] setText:[p itemName]];
+    [[cell textLabel] setText:[p name]];
     [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%0.1f m room: %@", p.distance/1000, [p roomName]]];
     
     
     //[self sortTableFromEnd:indexPath];
     
     
-    [[cell textLabel] setText:[p itemName]];
+    [[cell textLabel] setText:[p name]];
     [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%0.1f m room: %@", p.distance/1000, [p roomName]]];
     
 
@@ -273,7 +273,7 @@
     DSItem* i = [tableList objectAtIndex:[indexPath row]];
     
     [detailViewController setItem: i];
-    [detailViewController setTitle:[i itemName]];
+    [detailViewController setTitle:[i name]];
 
      // Pass the selected object to the new view controller.
      [[self navigationController] pushViewController:detailViewController animated:YES];

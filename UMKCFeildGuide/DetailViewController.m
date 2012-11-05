@@ -39,7 +39,7 @@
     // Do any additional setup after loading the view from its nib.
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
     CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(item.latitude, item.longitude);
-    DSMapPoint* point = [[DSMapPoint alloc] initWithCoordinate:coord title:[item itemName]];
+    DSMapPoint* point = [[DSMapPoint alloc] initWithCoordinate:coord title:[item name]];
     
     [locationView addAnnotation:point];
     //MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(coord, 500, 500);

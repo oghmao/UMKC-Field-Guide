@@ -30,7 +30,7 @@ typedef enum{
                   room:(NSString*) room
                  floor:(int) floor;
 
-@property (nonatomic, copy) NSString* itemName;
+@property (nonatomic, copy) NSString* name;
 @property (nonatomic) double latitude;
 @property (nonatomic) double longitude;
 @property (nonatomic) BuildingName bldgName;

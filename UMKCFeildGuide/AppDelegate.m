@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "DetailViewController.h"
 #import "MenuViewController.h"
+#import "XMLParser.h"
 
 @implementation AppDelegate
 
@@ -30,6 +31,25 @@
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    NSString *xmlPath = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"xml"];
+    NSData *xmlData = [NSData dataWithContentsOfFile:xmlPath];
+    NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithData:xmlData];
+    
+    //Initialize the delegate.
+    XMLParser *parser = [[XMLParser alloc] initXMLParser];
+    
+    //Set delegate
+    [xmlParser setDelegate:parser];
+    
+    //Start parsing the XML file.
+    BOOL success = [xmlParser parse];
+    
+    if(success)
+        NSLog(@"No Errors");
+    else
+        NSLog(@"Error Error Error!!!");
+    
     return YES;
 }
 
