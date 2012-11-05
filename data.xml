@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<location type="food">
+    <subtype>Vending Machine</subtype>
+    <longitude>-94.57513</longitude>
+    <latitude>39.03577</latitude>
+    <name>Vending Machine</name>
+    <description>Snacks and Soda in stairwell in west end of building, bottom floor.</description>
+    <building>Katz</building>
+    <room>Stairwell</room>
+</location>
+<location type="food">
+    <subtype>Vending Machine</subtype>
+    <longitude>-94.58214</longitude>
+    <latitude>39.03394</latitude>
+    <name>Vending Machine</name>
+    <description>Snacks and soda in hallway outside Records and Registration.</description>
+    <building>Administrative</building>
+    <room>Hallway</room>
+</location>
+<location type="food">
+    <subtype>Restaurant</subtype>
+    <longitude>-94.58127</longitude>
+    <latitude>39.03451</latitude>
+    <name>Baja Fresh</name>
+    <description>Mexican Food</description>
+    <building>Student Union</building>
+    <room>Food Court</room>
+</location>
+<location type="food">
+    <subtype>Restaurant</subtype>
+    <longitude>-94.58127</longitude>
+    <latitude>39.03451</latitude>
+    <name>Chic-Fil-A</name>
+    <description>Chicken Sandwiches</description>
+    <building>Student Union</building>
+    <room>Food Court</room>
+</location>
+<location type="food">
+    <subtype>Restaurant</subtype>
+    <longitude>-94.58127</longitude>
+    <latitude>39.03451</latitude>
+    <name>SubConnection</name>
+    <description>Sub Sandwiches</description>
+    <building>Student Union</building>
+    <room>Food Court</room>
+</location>
+<location type="food">
+    <subtype>Store</subtype>
+    <longitude>-94.58223</longitude>
+    <latitude>39.03494</latitude>
+    <name>Convienience Store</name>
+    <description>Groceries and Sundries for the residence halls.</description>
+    <building>Oak Street</building>
+    <room>N/A</room>
+</location>
+<location type="food">
+    <subtype>Restaurant</subtype>
+    <longitude>-94.58300</longitude>
+    <latitude>39.03490</latitude>
+    <name>Pizza 51</name>
+    <description>Pizza shoppe on 51st and Oak.</description>
+    <building></building>
+    <room></room>
+</location>
+<location type="food">
+    <subtype>Restaurant</subtype>
+    <longitude>-94.58334</longitude>
+    <latitude>39.03489</latitude>
+    <name>Sahara</name>
+    <description>Mediterranean food at 320 E 51st St.</description>
+    <building>N/A</building>
+    <room>N/A</room>
+</location>
+<location type="food">
+    <subtype>Restaurant</subtype>
+    <longitude>-94.58356</longitude>
+    <latitude>39.03493</latitude>
+    <name>Kin Lin</name>
+    <description>Chinese food at 314 E 51st St.</description>
+    <building>N/A</building>
+    <room>N/A</room>
+</location>
+<location type="food">
+    <subtype>Restaurant</subtype>
+    <longitude>-94.58364</longitude>
+    <latitude>39.03491</latitude>
+    <name>Subway</name>
+    <description>Sub Sandwiches at 316 E 51st St.</description>
+    <building>N/A</building>
+    <room>N/A</room>
+</location>
+<location type="food">
+    <subtype>Buffet</subtype>
+    <longitude>-94.57816</longitude>
+    <latitude>39.03622</latitude>
+    <name>UMKC Cafateria</name>
+    <description>Cafateria located on the bottom floor of the Student Center Building.</description>
+    <building>Student Center</building>
+    <room>N/A</room>
+</location>
+<location type="food">
+    <subtype>Restaurant</subtype>
+    <longitude>-94.57305</longitude>
+    <latitude>39.03417</latitude>
+    <name>Go Chicken Go</name>
+    <description>Fried Chicken</description>
+    <building>N/A</building>
+    <room>N/A</room>
+</location>
+<location type="food">
+    <subtype>Vending Machine</subtype>
+    <longitude>-94.57652</longitude>
+    <latitude>39.03380</latitude>
+    <name>Venging Machines</name>
+    <description>Snacks and Soda with microwave.</description>
+    <building>Flarsheim</building>
+    <room>346</room>
+</location>
+<location type="food">
+    <subtype>Restaurant</subtype>
+    <longitude>-94.57696</longitude>
+    <latitude>39.03302</latitude>
+    <name>Einstein Bros</name>
+    <description>Bagels and Shmear</description>
+    <building>Royal</building>
+    <room>20</room>
+</location>
+<location type="food">
+    <subtype>Restaurant</subtype>
+    <longitude>-94.57656</longitude>
+    <latitude>39.03504</latitude>
+    <name>Robot Cafe</name>
+    <description>Cafe and vending machines</description>
+    <building>Miller</building>
+    <room>111</room>
+</location>
+<location type="restrooms">
+    <subtype>Restrooms</subtype>
+    <longitude>-94.57487</longitude>
+    <latitude>39.03580</latitude>
+    <name>Restrooms</name>
+    <description>N/A</description>
+    <building>Katz</building>
+    <room>N/A</room>
+</location>
+<location type="restrooms">
+    <subtype>Restrooms</subtype>
+    <longitude>-94.57639</longitude>
+    <latitude>39.03371</latitude>
+    <name>Restrooms</name>
+    <description>N/A</description>
+    <building>Flarsheim</building>
+    <room>N/A</room>
+</location>
+<location type="restrooms">
+    <subtype>Restrooms</subtype>
+    <longitude>-94.57877</longitude>
+    <latitude>39.03157</latitude>
+    <name>Restrooms</name>
+    <description>N/A</description>
+    <building>Grant</building>
+    <room>N/A</room>
+</location>
+<location type="restrooms">
+    <subtype>Restrooms</subtype>
+    <longitude>-94.58120</longitude>
+    <latitude>39.03432</latitude>
+    <name>Restrooms</name>
+    <description>N/A</description>
+    <building>Student Union</building>
+    <room>N/A</room>
+</location>
+<location type="restrooms">
+    <subtype>Restrooms</subtype>
+    <longitude>-94.58217</longitude>
+    <latitude>39.03393</latitude>
+    <name>Restrooms</name>
+    <description>N/A</description>
+    <building>Administrative</building>
+    <room>N/A</room>
+</location>
+<location type="lounge">
+    <subtype>Lounge</subtype>
+    <longitude>-94.57630</longitude>
+    <latitude>39.03359</latitude>
+    <name>SCE Student Lounge</name>
+    <description>SCE student lounge on the 4th floor.</description>
+    <building>Flarsheim</building>
+    <room>456</room>
+</location>
+<location type="building">
+    <subtype>Katz</subtype>
+    <longitude>-94.57493</longitude>
+    <latitude>39.03568</latitude>
+    <name>Katz Hall</name>
+    <description>Katz Hall - Urban Planning and Design.</description>
+    <building>Katz</building>
+    <room>N/A</room>
+</location>
+<location type="building">
+    <subtype>Flarsheim</subtype>
+    <longitude>-94.57655</longitude>
+    <latitude>39.03374</latitude>
+    <name>Flarsheim Hall</name>
+    <description>Flarsheim Hall - Computing and Engineering.</description>
+    <building>Flarsheim</building>
+    <room>N/A</room>
+</location>
+<location type="building">
+    <subtype>Scofield</subtype>
+    <longitude>-94.57747</longitude>
+    <latitude>39.03375</latitude>
+    <name>Scofield Hall</name>
+    <description>Scofield Hall - Arts and Sciences.</description>
+    <building>Scofield</building>
+    <room>N/A</room>
+</location>
+<location type="building">
+    <subtype>Royal</subtype>
+    <longitude>-94.57747</longitude>
+    <latitude>39.03375</latitude>
+    <name>Royal Hall</name>
+    <description>Royal Hall - Classrooms.</description>
+    <building>Royal</building>
+    <room>N/A</room>
+</location>

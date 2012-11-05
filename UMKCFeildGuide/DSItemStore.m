@@ -40,39 +40,39 @@
 }
 
 -(DSItem*) createItem{
-    [userLocationManager startUpdatingLocation];
+    //[userLocationManager startUpdatingLocation];
 
     DSItem* p = [DSItem randomItem];
     
-    
-    CLLocation* currentLoc = userLocationManager.location;
-    CLLocation* cellLocation = [[CLLocation alloc] initWithLatitude:p.latitude longitude:p.longitude];
-    CLLocationDistance distance = [currentLoc distanceFromLocation:cellLocation];
-    [p setDistance:distance];
+//    
+//    CLLocation* currentLoc = userLocationManager.location;
+//    CLLocation* cellLocation = [[CLLocation alloc] initWithLatitude:p.latitude longitude:p.longitude];
+//    CLLocationDistance distance = [currentLoc distanceFromLocation:cellLocation];
+//    [p setDistance:distance];
     
     [allItems addObject:p];
     
-    NSMutableArray* array = [[NSMutableArray alloc] initWithArray:allItems];
-    
-    NSComparator comp = ^(DSItem* a, DSItem* b){
-        if ([a distance] > [b distance]) {
-            return (NSComparisonResult)NSOrderedDescending;
-        }
-        
-        if ([a distance] < [a distance]) {
-            return (NSComparisonResult)NSOrderedAscending;
-        }
-        return (NSComparisonResult)NSOrderedSame;
-    };
-    
-    
-
-    NSUInteger newIndex = [allItems indexOfObject:p
-                                 inSortedRange:(NSRange){0, [allItems count]}
-                                       options:NSBinarySearchingInsertionIndex
-                               usingComparator:comp];
-    
-    [array insertObject:p atIndex:newIndex];
+//    NSMutableArray* array = [[NSMutableArray alloc] initWithArray:allItems];
+//    
+//    NSComparator comp = ^(DSItem* a, DSItem* b){
+//        if ([a distance] > [b distance]) {
+//            return (NSComparisonResult)NSOrderedDescending;
+//        }
+//        
+//        if ([a distance] < [a distance]) {
+//            return (NSComparisonResult)NSOrderedAscending;
+//        }
+//        return (NSComparisonResult)NSOrderedSame;
+//    };
+//    
+//    
+//
+//    NSUInteger newIndex = [allItems indexOfObject:p
+//                                 inSortedRange:(NSRange){0, [allItems count]}
+//                                       options:NSBinarySearchingInsertionIndex
+//                               usingComparator:comp];
+//    
+//    [array insertObject:p atIndex:newIndex];
     
     
     
