@@ -44,8 +44,10 @@
 						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIClipsSubviews">YES</bool>
+						<int key="IBUIContentMode">1</int>
 						<bool key="IBUIMultipleTouchEnabled">YES</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<int key="IBMKMapType">2</int>
 						<bool key="IBMKShowsUserLocation">YES</bool>
 					</object>
 					<object class="IBUILabel" id="693382118">

@@ -9,6 +9,7 @@
 #import "DetailViewController.h"
 #import "DSItem.h"
 #import "DSMapPoint.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface DetailViewController ()
 
@@ -40,6 +41,11 @@
     [[self navigationController] setNavigationBarHidden:NO animated:YES];
     CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(item.latitude, item.longitude);
     DSMapPoint* point = [[DSMapPoint alloc] initWithCoordinate:coord title:[item name]];
+    
+    locationView.layer.cornerRadius = 10.0;
+    
+    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(coord, 250, 250);
+    [locationView setRegion:region animated:YES];
     
     [locationView addAnnotation:point];
 

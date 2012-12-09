@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C82CEAFB16751C0D0049F23A /* UMKCWaypoints.gpx in Resources */ = {isa = PBXBuildFile; fileRef = C82CEAF916751C0D0049F23A /* UMKCWaypoints.gpx */; };
+		C82CEAFC16751C0D0049F23A /* UMKCCenter.gpx in Resources */ = {isa = PBXBuildFile; fileRef = C82CEAFA16751C0D0049F23A /* UMKCCenter.gpx */; };
 		C8A14DF51614FA680039985C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C8A14DF41614FA680039985C /* Default.png */; };
 		C8B2A4E9160A2D3A00CE9307 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B2A4E8160A2D3A00CE9307 /* UIKit.framework */; };
 		C8B2A4EB160A2D3A00CE9307 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B2A4EA160A2D3A00CE9307 /* Foundation.framework */; };
@@ -46,6 +48,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C82CEAF916751C0D0049F23A /* UMKCWaypoints.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = UMKCWaypoints.gpx; sourceTree = "<group>"; };
+		C82CEAFA16751C0D0049F23A /* UMKCCenter.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = UMKCCenter.gpx; sourceTree = "<group>"; };
 		C8A14DF41614FA680039985C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		C8A14DF61614FA790039985C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		C8B2A4E4160A2D3A00CE9307 /* UMKCFeildGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UMKCFeildGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +120,8 @@
 		C8B2A4D9160A2D3A00CE9307 = {
 			isa = PBXGroup;
 			children = (
+				C82CEAF916751C0D0049F23A /* UMKCWaypoints.gpx */,
+				C82CEAFA16751C0D0049F23A /* UMKCCenter.gpx */,
 				C8B2A4F0160A2D3A00CE9307 /* UMKCFeildGuide */,
 				C8B2A4E7160A2D3A00CE9307 /* Frameworks */,
 				C8B2A4E5160A2D3A00CE9307 /* Products */,
@@ -279,6 +285,8 @@
 				C8CE9F99161DF3AF0093893B /* bldg-icon2.png in Resources */,
 				C8CE9F9B161DF7860093893B /* parking-icon.png in Resources */,
 				C8F4AFF51646393A0030B32A /* data.xml in Resources */,
+				C82CEAFB16751C0D0049F23A /* UMKCWaypoints.gpx in Resources */,
+				C82CEAFC16751C0D0049F23A /* UMKCCenter.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

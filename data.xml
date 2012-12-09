@@ -60,7 +60,7 @@
     <latitude>39.03490</latitude>
     <name>Pizza 51</name>
     <description>Pizza shoppe on 51st and Oak.</description>
-    <building></building>
+    <building>N/A</building>
     <room></room>
 </location>
 <location type="food">
@@ -218,11 +218,20 @@
 </location>
 <location type="building">
     <subtype>Bldg</subtype>
-    <longitude>-94.57747</longitude>
-    <latitude>39.03375</latitude>
+    <longitude>-94.57701</longitude>
+    <latitude>39.03298</latitude>
     <name>Royal Hall</name>
     <description>Royal Hall - Classrooms.</description>
     <building>Royal</building>
     <room>N/A</room>
 </location>
+<location type="ADA">
+    <subtype>ADA</subtype>
+    <longitude>-94.57470</longitude>
+    <latitude>39.03577</latitude>
+    <name>Handicap Entrance</name>
+    <description>Handicap Entrance into Katz Hall.</description>
+    <building>Katz</building>
+    <room>N/A</room>
+    </location>
 </locations>

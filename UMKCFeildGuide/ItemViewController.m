@@ -143,11 +143,11 @@
     DSItem* p = [tableList objectAtIndex:[indexPath row]];
   
     
-    [[cell textLabel] setText:[p name]];
-    [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%0.1f m room: %@", p.distance/1000, [p roomName]]];
+//    [[cell textLabel] setText:[p name]];
+//    [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%0.1f m room: %@", p.distance/1000, [p roomName]]];
     
     [[cell textLabel] setText:[p name]];
-    [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%0.1f m room: %@", p.distance/1000, [p roomName]]];
+    [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%0.1f m Building: %@", p.distance/1000, [p bldgName]]];
     
 
     

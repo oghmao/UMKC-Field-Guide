@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<gpx version="1.1" creator="Xcode"> 
+
+    <wpt lat="39.0351391251691" lon="-94.57851150048113">
+         <name>UMKC</name>
+	</wpt>
+    <wpt lat="39.033711" lon="-94.576344">
+        <name>Flarsheim Hall</name>
+	</wpt>
+    <wpt lat="39.03299967332515" lon="-94.57698371527782">
+        <name>Royal Hall</name>
+	</wpt>
+    
+</gpx>
