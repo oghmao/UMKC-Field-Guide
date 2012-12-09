@@ -12,9 +12,15 @@
 
 @class DSItem;
 
-@interface DSItemStore : NSObject <CLLocationManagerDelegate>{
+@interface DSItemStore : NSObject <CLLocationManagerDelegate, NSXMLParserDelegate>{
     NSMutableArray* allItems;
     CLLocationManager* userLocationManager;
+    NSMutableString* element;
+    
+    double lat, lon;
+    NSString* bldg;
+    NSString* room, *name, *description, *type;
+    int floor;
 }
 
 +(DSItemStore*) sharedStore;

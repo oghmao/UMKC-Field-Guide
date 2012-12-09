@@ -31,6 +31,22 @@
         allItems = [[NSMutableArray alloc]init];
         [userLocationManager setDelegate:self];
     }
+        
+    NSXMLParser* parser = [[NSXMLParser alloc] initWithData:[[NSData alloc] initWithContentsOfFile:@"/Users/oghmao/Documents/Developer/UMKCFeildGuide/data.xml"]];
+    
+    [parser setDelegate:self];
+    
+    
+    [parser setShouldProcessNamespaces:NO];
+    [parser setShouldReportNamespacePrefixes:NO];
+    [parser setShouldResolveExternalEntities:NO];
+    
+    BOOL success = [parser parse];
+        
+    if(success)
+        NSLog(@"No Errors");
+    else
+        NSLog(@"Error Error Error!!!");
     
     return self;
 }
@@ -40,42 +56,9 @@
 }
 
 -(DSItem*) createItem{
-    //[userLocationManager startUpdatingLocation];
-
     DSItem* p = [DSItem randomItem];
     
-//    
-//    CLLocation* currentLoc = userLocationManager.location;
-//    CLLocation* cellLocation = [[CLLocation alloc] initWithLatitude:p.latitude longitude:p.longitude];
-//    CLLocationDistance distance = [currentLoc distanceFromLocation:cellLocation];
-//    [p setDistance:distance];
-    
     [allItems addObject:p];
-    
-//    NSMutableArray* array = [[NSMutableArray alloc] initWithArray:allItems];
-//    
-//    NSComparator comp = ^(DSItem* a, DSItem* b){
-//        if ([a distance] > [b distance]) {
-//            return (NSComparisonResult)NSOrderedDescending;
-//        }
-//        
-//        if ([a distance] < [a distance]) {
-//            return (NSComparisonResult)NSOrderedAscending;
-//        }
-//        return (NSComparisonResult)NSOrderedSame;
-//    };
-//    
-//    
-//
-//    NSUInteger newIndex = [allItems indexOfObject:p
-//                                 inSortedRange:(NSRange){0, [allItems count]}
-//                                       options:NSBinarySearchingInsertionIndex
-//                               usingComparator:comp];
-//    
-//    [array insertObject:p atIndex:newIndex];
-    
-    
-    
     return p;
 }
 
@@ -97,6 +80,54 @@
 
 -(void) dealloc{
     [userLocationManager stopUpdatingLocation];
+}
+
+- (void)parser:(NSXMLParser *)parser
+didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI
+ qualifiedName:(NSString *)qualifiedName attributes:(NSDictionary*)attributeDict {
+    
+    NSLog(@"Started Element %@", elementName);
+    element = [NSMutableString string];
+          
+}
+
+- (void)parser:(NSXMLParser *)parser
+ didEndElement:(NSString *)elementName
+  namespaceURI:(NSString *)namespaceURI
+ qualifiedName:(NSString *)qName {
+    
+    NSLog(@"Found an element named: %@ with a value of: %@", elementName, element);
+    
+    if ([elementName isEqualToString:@"longitude"]){
+        lon = [[NSString stringWithString:element] doubleValue];
+    }else if ([elementName isEqualToString:@"latitude"]){
+        lat = [[NSString stringWithString:element] doubleValue];
+    }else if ([elementName isEqualToString:@"name"]){
+        name = [NSString stringWithString:element];
+    }else if ([elementName isEqualToString:@"description"]){
+        description = [NSString stringWithString:element];
+    }else if ([elementName isEqualToString:@"building"]){
+        bldg = [NSString stringWithString:element];
+    }else if ([elementName isEqualToString:@"room"]){
+        room = [NSString stringWithString:element];
+    }else if ([elementName isEqualToString:@"subtype"]){
+        type = [NSString stringWithString:element];
+    }else if ([elementName isEqualToString:@"location"]) {
+        DSItem* p = [[DSItem alloc]initWithItemName:name lat:lat lon:lon bldg:bldg room:room type:type floor:floor];
+        
+        [allItems addObject:p];
+        NSLog(@"item added with name:%@, lat: %f, lon: %f, bldg: %@, room: %@, type: %@, floor: %i", name, lat, lon, bldg, room, type, floor);
+        
+    }
+          
+}
+          
+- (void)parser:(NSXMLParser*)parser foundCharacters:(NSString *)string{
+    if(element == nil){
+       element = [[NSMutableString alloc] init];
+    }
+    
+    [element appendString:string];
 }
 
 @end

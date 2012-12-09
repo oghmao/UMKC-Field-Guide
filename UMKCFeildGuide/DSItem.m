@@ -10,15 +10,15 @@
 
 @implementation DSItem
 
-@synthesize name, latitude, longitude, bldgName, floorNumber, roomName, buildingString, isInTable, distance;
+@synthesize typeString, name, latitude, longitude, bldgName, floorNumber, roomName, buildingString, isInTable, distance;
 
 +(DSItem*) randomItem{
     
-    int randomBldg = rand() % 5;
+    NSString* randomBldg = @"";
     
     static int name = 0;
     
-    DSItem* newItem = [[DSItem alloc] initWithItemName:[NSString stringWithFormat:@"%i", name++] lat:(rand() % 39) lon:(-1 * (rand() % 150)) bldg:randomBldg room:[NSString stringWithFormat:@"%i",(rand() % 50)] floor:3];
+    DSItem* newItem = [[DSItem alloc] initWithItemName:[NSString stringWithFormat:@"%i", name++] lat:(rand() % 39) lon:(-1 * (rand() % 150)) bldg:randomBldg room:[NSString stringWithFormat:@"%i",(rand() % 50)] type:@"Bldg" floor:3];
     
     return newItem;
 }
@@ -28,14 +28,17 @@
     return [self initWithItemName:@"Possession"
                               lat:0.0
                               lon:0.0
-            bldg:0 room:@"N/A" floor:0];
+                             bldg:0 room:@"N/A"
+                             type: @"N/A"
+                            floor:0];
 }
 
 - (id)initWithItemName:(NSString *)itemName
                    lat:(double) lat
                    lon:(double) lon
-                  bldg:(BuildingName) bldg
+                  bldg:(NSString*) bldg
                   room:(NSString*) room
+                  type:(NSString*) t
                  floor:(int) floor{
     
     // Call the superclass's designated initializer
@@ -49,30 +52,10 @@
         [self setLongitude:lon];
         [self setBldgName:bldg];
         [self setFloorNumber:floor];
+        [self setTypeString:t];
         [self setRoomName:room];
         
-        switch (bldgName) {
-            case 0:
-                [self setBuildingString:@"Flarsheim"];
-                break;
-            case 1:
-                [self setBuildingString:@"Haag"];
-                break;
-            case 2:
-                [self setBuildingString:@"Royal"];
-                break;
-            case 3:
-                [self setBuildingString:@"Katz"];
-                break;
-            case 4:
-                [self setBuildingString:@"Scofield"];
-                break;
-                
-            default:
-                break;
-        }
         [self setIsInTable:NO];
-        //location = CLLocationCoordinate2DMake(latitude, longitude);
     }
     
     // Return the address of the newly initialized object

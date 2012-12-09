@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import "DetailViewController.h"
 #import "MenuViewController.h"
-#import "XMLParser.h"
 
 @implementation AppDelegate
 
@@ -22,7 +21,6 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-//    DetailViewController* dvc = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
     MenuViewController* mvc = [[MenuViewController alloc] initWithNibName:@"MenuViewController" bundle:nil];
     
     UINavigationController* nc = [[UINavigationController alloc] initWithRootViewController:mvc];
@@ -31,24 +29,6 @@
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    
-    NSString *xmlPath = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"xml"];
-    NSData *xmlData = [NSData dataWithContentsOfFile:xmlPath];
-    NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithData:xmlData];
-    
-    //Initialize the delegate.
-    XMLParser *parser = [[XMLParser alloc] initXMLParser];
-    
-    //Set delegate
-    [xmlParser setDelegate:parser];
-    
-    //Start parsing the XML file.
-    BOOL success = [xmlParser parse];
-    
-    if(success)
-        NSLog(@"No Errors");
-    else
-        NSLog(@"Error Error Error!!!");
     
     return YES;
 }
@@ -81,8 +61,7 @@
     [self saveContext];
 }
 
-- (void)saveContext
-{
+- (void)saveContext{
     NSError *error = nil;
     NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
     if (managedObjectContext != nil) {

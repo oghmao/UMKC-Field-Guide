@@ -16,7 +16,7 @@
 @end
 
 @implementation ItemViewController
-@synthesize tableList;
+@synthesize tableList, type;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -75,7 +75,8 @@
     [super viewWillAppear:YES];
     [userLocationManager startUpdatingLocation];
     
-    tableList = [[DSItemStore sharedStore] allItems];
+    
+    //tableList = [[DSItemStore sharedStore] allItems];
     CLLocation* currentLoc = userLocationManager.location;
     CLLocationDistance distance;
 
@@ -103,8 +104,7 @@
 }
 
 
-- (void)viewDidUnload
-{
+- (void)viewDidUnload{
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -115,68 +115,19 @@
     [super viewWillDisappear:YES];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation{
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    // Return the number of sections.
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
 
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-//    if (section == 0) {
-//        int blgdCount = 0;
-//        for (int i = 0; i < [[[DSItemStore sharedStore] allItems] count]; ++i) {
-//            DSItem* current = [[[DSItemStore sharedStore] allItems] objectAtIndex:i];
-//            if (current.bldgName == Flarsheim) {
-//                blgdCount++;
-//            }
-//        }
-//        return blgdCount;
-//    }else if (section == 1) {
-//        int blgdCount = 0;
-//        for (int i = 0; i < [[[DSItemStore sharedStore] allItems] count]; ++i) {
-//            DSItem* current = [[[DSItemStore sharedStore] allItems] objectAtIndex:i];
-//            if (current.bldgName == Haag) {
-//                blgdCount++;
-//            }
-//        }
-//        return blgdCount;
-//    }else if (section == 2) {
-//        int blgdCount = 0;
-//        for (int i = 0; i < [[[DSItemStore sharedStore] allItems] count]; ++i) {
-//            DSItem* current = [[[DSItemStore sharedStore] allItems] objectAtIndex:i];
-//            if (current.bldgName == Royal) {
-//                blgdCount++;
-//            }
-//        }
-//        return blgdCount;
-//    }else if (section == 3) {
-//        int blgdCount = 0;
-//        for (int i = 0; i < [[[DSItemStore sharedStore] allItems] count]; ++i) {
-//            DSItem* current = [[[DSItemStore sharedStore] allItems] objectAtIndex:i];
-//            if (current.bldgName == Katz) {
-//                blgdCount++;
-//            }
-//        }
-//        return blgdCount;
-//    }else if (section == 4) {
-//        int blgdCount = 0;
-//        for (int i = 0; i < [[[DSItemStore sharedStore] allItems] count]; ++i) {
-//            DSItem* current = [[[DSItemStore sharedStore] allItems] objectAtIndex:i];
-//            if (current.bldgName == Scofield) {
-//                blgdCount++;
-//            }
-//        }
-//        return blgdCount;
-//    }else
-//        return 1;
-    return [[[DSItemStore sharedStore] allItems] count];
+
+    return [tableList count];
 }
 
 -(UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -190,23 +141,10 @@
     
 
     DSItem* p = [tableList objectAtIndex:[indexPath row]];
-    //DSItem* p = [[[DSItemStore sharedStore] allItems] objectAtIndex:[indexPath row]];
-//    CLLocation* currentLoc = userLocationManager.location;
-//    CLLocation* cellLocation = [[CLLocation alloc] initWithLatitude:p.latitude longitude:p.longitude];
-//    CLLocationDistance distance = [currentLoc distanceFromLocation:cellLocation];
-//    p.distance = distance;
-//    
-    
-    
-    //[self sortTableFromEnd:indexPath];
-    
+  
     
     [[cell textLabel] setText:[p name]];
     [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%0.1f m room: %@", p.distance/1000, [p roomName]]];
-    
-    
-    //[self sortTableFromEnd:indexPath];
-    
     
     [[cell textLabel] setText:[p name]];
     [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%0.1f m room: %@", p.distance/1000, [p roomName]]];
@@ -217,27 +155,12 @@
 }
 
 -(void) locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation{
-    // How many seconds ago was this new location created?
     NSTimeInterval t = [[newLocation timestamp] timeIntervalSinceNow];
-    
-    // CLLocationManagers will return the last found location of the
-    // device first, you don't want that data in this case.
-    // If this location was made more than 3 minutes ago, ignore it.
+
     if (t < -180) {
-        // This is cached data, you don't want it, keep looking
         return;
     }
 }
-//-(void) sortTableFromEnd:(NSIndexPath *)indexPath{
-//    for (int i = [indexPath row]; i > 0; --i) {
-//        DSItem* p = [[[DSItemStore sharedStore] allItems] objectAtIndex:i];
-//        DSItem* q = [[[DSItemStore sharedStore] allItems] objectAtIndex:i-1];        
-//    
-//        if (p.distance < q.distance) {
-//            [[[DSItemStore sharedStore] allItems] exchangeObjectAtIndex:i withObjectAtIndex:i-1];
-//        }
-//    }
-//}
 
 /*
 // Override to support conditional editing of the table view.
@@ -268,8 +191,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-     DetailViewController *detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
-     // ...
+    DetailViewController *detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
     DSItem* i = [tableList objectAtIndex:[indexPath row]];
     
     [detailViewController setItem: i];
@@ -285,17 +207,6 @@
     [userLocationManager setDelegate:nil];
     tableList = nil;
 }
-
-//-(void) sortTableFromEnd:(NSIndexPath *)indexPath{
-//    for (int i = [indexPath row]; i > 0; --i) {
-//        DSItem* p = [[[DSItemStore sharedStore] allItems] objectAtIndex:i];
-//        DSItem* q = [[[DSItemStore sharedStore] allItems] objectAtIndex:i-1];
-//
-//        if (p.distance < q.distance) {
-//            [[[DSItemStore sharedStore] allItems] exchangeObjectAtIndex:i withObjectAtIndex:i-1];
-//        }
-//    }
-//}
 
 /*
  // Override to support conditional editing of the table view.

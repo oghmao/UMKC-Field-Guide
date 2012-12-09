@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
+<locations>
 <location type="food">
-    <subtype>Vending Machine</subtype>
+    <subtype>Food</subtype>
     <longitude>-94.57513</longitude>
     <latitude>39.03577</latitude>
     <name>Vending Machine</name>
@@ -9,7 +10,7 @@
     <room>Stairwell</room>
 </location>
 <location type="food">
-    <subtype>Vending Machine</subtype>
+    <subtype>Food</subtype>
     <longitude>-94.58214</longitude>
     <latitude>39.03394</latitude>
     <name>Vending Machine</name>
@@ -18,7 +19,7 @@
     <room>Hallway</room>
 </location>
 <location type="food">
-    <subtype>Restaurant</subtype>
+    <subtype>Food</subtype>
     <longitude>-94.58127</longitude>
     <latitude>39.03451</latitude>
     <name>Baja Fresh</name>
@@ -27,7 +28,7 @@
     <room>Food Court</room>
 </location>
 <location type="food">
-    <subtype>Restaurant</subtype>
+    <subtype>Food</subtype>
     <longitude>-94.58127</longitude>
     <latitude>39.03451</latitude>
     <name>Chic-Fil-A</name>
@@ -36,7 +37,7 @@
     <room>Food Court</room>
 </location>
 <location type="food">
-    <subtype>Restaurant</subtype>
+    <subtype>Food</subtype>
     <longitude>-94.58127</longitude>
     <latitude>39.03451</latitude>
     <name>SubConnection</name>
@@ -45,7 +46,7 @@
     <room>Food Court</room>
 </location>
 <location type="food">
-    <subtype>Store</subtype>
+    <subtype>Food</subtype>
     <longitude>-94.58223</longitude>
     <latitude>39.03494</latitude>
     <name>Convienience Store</name>
@@ -54,7 +55,7 @@
     <room>N/A</room>
 </location>
 <location type="food">
-    <subtype>Restaurant</subtype>
+    <subtype>Food</subtype>
     <longitude>-94.58300</longitude>
     <latitude>39.03490</latitude>
     <name>Pizza 51</name>
@@ -63,7 +64,7 @@
     <room></room>
 </location>
 <location type="food">
-    <subtype>Restaurant</subtype>
+    <subtype>Food</subtype>
     <longitude>-94.58334</longitude>
     <latitude>39.03489</latitude>
     <name>Sahara</name>
@@ -72,7 +73,7 @@
     <room>N/A</room>
 </location>
 <location type="food">
-    <subtype>Restaurant</subtype>
+    <subtype>Food</subtype>
     <longitude>-94.58356</longitude>
     <latitude>39.03493</latitude>
     <name>Kin Lin</name>
@@ -81,7 +82,7 @@
     <room>N/A</room>
 </location>
 <location type="food">
-    <subtype>Restaurant</subtype>
+    <subtype>Food</subtype>
     <longitude>-94.58364</longitude>
     <latitude>39.03491</latitude>
     <name>Subway</name>
@@ -90,7 +91,7 @@
     <room>N/A</room>
 </location>
 <location type="food">
-    <subtype>Buffet</subtype>
+    <subtype>Food</subtype>
     <longitude>-94.57816</longitude>
     <latitude>39.03622</latitude>
     <name>UMKC Cafateria</name>
@@ -99,7 +100,7 @@
     <room>N/A</room>
 </location>
 <location type="food">
-    <subtype>Restaurant</subtype>
+    <subtype>Food</subtype>
     <longitude>-94.57305</longitude>
     <latitude>39.03417</latitude>
     <name>Go Chicken Go</name>
@@ -108,7 +109,7 @@
     <room>N/A</room>
 </location>
 <location type="food">
-    <subtype>Vending Machine</subtype>
+    <subtype>Food</subtype>
     <longitude>-94.57652</longitude>
     <latitude>39.03380</latitude>
     <name>Venging Machines</name>
@@ -117,7 +118,7 @@
     <room>346</room>
 </location>
 <location type="food">
-    <subtype>Restaurant</subtype>
+    <subtype>Food</subtype>
     <longitude>-94.57696</longitude>
     <latitude>39.03302</latitude>
     <name>Einstein Bros</name>
@@ -126,7 +127,7 @@
     <room>20</room>
 </location>
 <location type="food">
-    <subtype>Restaurant</subtype>
+    <subtype>Food</subtype>
     <longitude>-94.57656</longitude>
     <latitude>39.03504</latitude>
     <name>Robot Cafe</name>
@@ -189,7 +190,7 @@
     <room>456</room>
 </location>
 <location type="building">
-    <subtype>Katz</subtype>
+    <subtype>Bldg</subtype>
     <longitude>-94.57493</longitude>
     <latitude>39.03568</latitude>
     <name>Katz Hall</name>
@@ -198,7 +199,7 @@
     <room>N/A</room>
 </location>
 <location type="building">
-    <subtype>Flarsheim</subtype>
+    <subtype>Bldg</subtype>
     <longitude>-94.57655</longitude>
     <latitude>39.03374</latitude>
     <name>Flarsheim Hall</name>
@@ -207,7 +208,7 @@
     <room>N/A</room>
 </location>
 <location type="building">
-    <subtype>Scofield</subtype>
+    <subtype>Bldg</subtype>
     <longitude>-94.57747</longitude>
     <latitude>39.03375</latitude>
     <name>Scofield Hall</name>
@@ -216,7 +217,7 @@
     <room>N/A</room>
 </location>
 <location type="building">
-    <subtype>Royal</subtype>
+    <subtype>Bldg</subtype>
     <longitude>-94.57747</longitude>
     <latitude>39.03375</latitude>
     <name>Royal Hall</name>
@@ -224,3 +225,4 @@
     <building>Royal</building>
     <room>N/A</room>
 </location>
+</locations>

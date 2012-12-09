@@ -13,6 +13,7 @@
 
 @interface DetailViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>{
     IBOutlet MKMapView *locationView;
+    IBOutlet UILabel* name, *building, *floor, *room;
     
     DSItem* item;
 

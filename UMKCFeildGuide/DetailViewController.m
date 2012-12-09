@@ -42,13 +42,17 @@
     DSMapPoint* point = [[DSMapPoint alloc] initWithCoordinate:coord title:[item name]];
     
     [locationView addAnnotation:point];
-    //MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(coord, 500, 500);
-    //[locationView setRegion:region animated:YES];
+
+    [name setText:[item name]];
+    [building setText:[item bldgName]];
+    [room setText:[item roomName]];
+    
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
+    
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }

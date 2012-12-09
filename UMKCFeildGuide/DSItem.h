@@ -26,17 +26,20 @@ typedef enum{
 - (id)initWithItemName:(NSString *)name
                    lat:(double) lat
                    lon:(double) lon
-                  bldg:(BuildingName) bldg
+                  bldg:(NSString *) bldg
                   room:(NSString*) room
+                  type:(NSString*) t
                  floor:(int) floor;
+
 
 @property (nonatomic, copy) NSString* name;
 @property (nonatomic) double latitude;
 @property (nonatomic) double longitude;
-@property (nonatomic) BuildingName bldgName;
+@property (nonatomic) NSString* bldgName;
 @property (nonatomic, copy) NSString* roomName;
 @property (nonatomic) int floorNumber;
 @property (nonatomic, copy) NSString* buildingString;
+@property (nonatomic) NSString* typeString;
 @property (nonatomic) BOOL isInTable;
 @property (nonatomic) CLLocationDistance distance;
 

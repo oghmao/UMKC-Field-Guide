@@ -15,9 +15,10 @@
     NSString* name;
     CLLocationManager* userLocationManager;
     NSArray* tableList;
+    NSString* type;
 }
 
 @property (nonatomic, copy) NSArray* tableList;
-//-(void) sortTableFromEnd:(NSInteger *)indexPath;
+@property (nonatomic, copy) NSString* type;
 
 @end

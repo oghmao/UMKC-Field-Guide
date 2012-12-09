@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C884A9AC164783CC00826097 /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C884A9AB164783CC00826097 /* XMLParser.m */; };
-		C884A9B01647857A00826097 /* XMLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C884A9AF1647857A00826097 /* XMLAppDelegate.m */; };
 		C8A14DF51614FA680039985C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C8A14DF41614FA680039985C /* Default.png */; };
 		C8B2A4E9160A2D3A00CE9307 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B2A4E8160A2D3A00CE9307 /* UIKit.framework */; };
 		C8B2A4EB160A2D3A00CE9307 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8B2A4EA160A2D3A00CE9307 /* Foundation.framework */; };
@@ -48,10 +46,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C884A9AA164783CC00826097 /* XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLParser.h; sourceTree = "<group>"; };
-		C884A9AB164783CC00826097 /* XMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLParser.m; sourceTree = "<group>"; };
-		C884A9AE1647857A00826097 /* XMLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLAppDelegate.h; sourceTree = "<group>"; };
-		C884A9AF1647857A00826097 /* XMLAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLAppDelegate.m; sourceTree = "<group>"; };
 		C8A14DF41614FA680039985C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		C8A14DF61614FA790039985C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		C8B2A4E4160A2D3A00CE9307 /* UMKCFeildGuide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UMKCFeildGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,10 +151,6 @@
 				C8B2A4FA160A2D3A00CE9307 /* AppDelegate.m */,
 				C8B2A51C160A372300CE9307 /* MenuViewController.h */,
 				C8B2A51D160A372300CE9307 /* MenuViewController.m */,
-				C884A9AE1647857A00826097 /* XMLAppDelegate.h */,
-				C884A9AF1647857A00826097 /* XMLAppDelegate.m */,
-				C884A9AA164783CC00826097 /* XMLParser.h */,
-				C884A9AB164783CC00826097 /* XMLParser.m */,
 				C8B2A533160B779500CE9307 /* SettingsViewController.h */,
 				C8B2A534160B779500CE9307 /* SettingsViewController.m */,
 				C8B2A521160A413E00CE9307 /* ItemViewController.h */,
@@ -309,8 +299,6 @@
 				C8B2A52B160AE22B00CE9307 /* DSItemStore.m in Sources */,
 				C8B2A532160B69CC00CE9307 /* DSMapPoint.m in Sources */,
 				C8B2A536160B779700CE9307 /* SettingsViewController.m in Sources */,
-				C884A9AC164783CC00826097 /* XMLParser.m in Sources */,
-				C884A9B01647857A00826097 /* XMLAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

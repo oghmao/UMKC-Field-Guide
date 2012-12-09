@@ -11,6 +11,7 @@
 #import "ItemViewController.h"
 #import "DSItemStore.h"
 #import "SettingsViewController.h"
+#import "DSItem.h"
 
 @interface MenuViewController ()
 
@@ -30,10 +31,6 @@
         
         [[self view] addSubview:backgroundImage];
         [[self view] sendSubviewToBack:backgroundImage];
-        
-        for (int i = 0; i < 25; ++i) {
-            [[DSItemStore sharedStore] createItem];
-        }
         
         userLocationManager = [[CLLocationManager alloc] init];
         [userLocationManager setDelegate:self];
@@ -75,9 +72,145 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
--(IBAction)didSelectCategory:(id)sender{
+-(IBAction)didSelectCategoryFacilities:(id)sender{
+    
+    NSMutableArray* tempList = [[NSMutableArray alloc]init];
+    
     ItemViewController* ivc = [[ItemViewController alloc] init];
-    ivc.tableList = [[DSItemStore sharedStore]allItems];
+    for (int i = 0; i < [[DSItemStore sharedStore]allItems].count; i++) {
+        DSItem* temp = [[[DSItemStore sharedStore]allItems]objectAtIndex:i];
+        if ([temp.typeString isEqualToString:@"Restrooms"]) {
+            [tempList addObject:[[[DSItemStore sharedStore]allItems]objectAtIndex:i]];
+        }
+    }
+    ivc.tableList = tempList;
+    
+    
+    [ivc setTitle:[[sender titleLabel] text]];
+    
+    [[self navigationController] pushViewController:ivc animated:YES];
+}
+-(IBAction)didSelectCategoryBldg:(id)sender{
+    
+    NSMutableArray* tempList = [[NSMutableArray alloc]init];
+    
+    ItemViewController* ivc = [[ItemViewController alloc] init];
+    for (int i = 0; i < [[DSItemStore sharedStore]allItems].count; i++) {
+        DSItem* temp = [[[DSItemStore sharedStore]allItems]objectAtIndex:i];
+        if ([temp.typeString isEqualToString:@"Bldg"]) {
+            [tempList addObject:[[[DSItemStore sharedStore]allItems]objectAtIndex:i]];
+        }
+    }
+    ivc.tableList = tempList;
+    
+    
+    [ivc setTitle:[[sender titleLabel] text]];
+    
+    [[self navigationController] pushViewController:ivc animated:YES];
+}
+-(IBAction)didSelectCategoryFood:(id)sender{
+    
+    NSMutableArray* tempList = [[NSMutableArray alloc]init];
+    
+    ItemViewController* ivc = [[ItemViewController alloc] init];
+    for (int i = 0; i < [[DSItemStore sharedStore]allItems].count; i++) {
+        DSItem* temp = [[[DSItemStore sharedStore]allItems]objectAtIndex:i];
+        if ([temp.typeString isEqualToString:@"Food"]) {
+            [tempList addObject:[[[DSItemStore sharedStore]allItems]objectAtIndex:i]];
+        }
+    }
+    ivc.tableList = tempList;
+    
+    
+    [ivc setTitle:[[sender titleLabel] text]];
+    
+    [[self navigationController] pushViewController:ivc animated:YES];
+}
+-(IBAction)didSelectCategoryLabs:(id)sender{
+    
+    NSMutableArray* tempList = [[NSMutableArray alloc]init];
+    
+    ItemViewController* ivc = [[ItemViewController alloc] init];
+    for (int i = 0; i < [[DSItemStore sharedStore]allItems].count; i++) {
+        DSItem* temp = [[[DSItemStore sharedStore]allItems]objectAtIndex:i];
+        if ([temp.typeString isEqualToString:@"Labs"]) {
+            [tempList addObject:[[[DSItemStore sharedStore]allItems]objectAtIndex:i]];
+        }
+    }
+    ivc.tableList = tempList;
+    
+    
+    [ivc setTitle:[[sender titleLabel] text]];
+    
+    [[self navigationController] pushViewController:ivc animated:YES];
+}
+-(IBAction)didSelectCategoryStudying:(id)sender{
+    
+    NSMutableArray* tempList = [[NSMutableArray alloc]init];
+    
+    ItemViewController* ivc = [[ItemViewController alloc] init];
+    for (int i = 0; i < [[DSItemStore sharedStore]allItems].count; i++) {
+        DSItem* temp = [[[DSItemStore sharedStore]allItems]objectAtIndex:i];
+        if ([temp.typeString isEqualToString:@"Lounge"]) {
+            [tempList addObject:[[[DSItemStore sharedStore]allItems]objectAtIndex:i]];
+        }
+    }
+    ivc.tableList = tempList;
+    
+    
+    [ivc setTitle:[[sender titleLabel] text]];
+    
+    [[self navigationController] pushViewController:ivc animated:YES];
+}
+-(IBAction)didSelectCategoryServices:(id)sender{
+    
+    NSMutableArray* tempList = [[NSMutableArray alloc]init];
+    
+    ItemViewController* ivc = [[ItemViewController alloc] init];
+    for (int i = 0; i < [[DSItemStore sharedStore]allItems].count; i++) {
+        DSItem* temp = [[[DSItemStore sharedStore]allItems]objectAtIndex:i];
+        if ([temp.typeString isEqualToString:@"Services"]) {
+            [tempList addObject:[[[DSItemStore sharedStore]allItems]objectAtIndex:i]];
+        }
+    }
+    ivc.tableList = tempList;
+    
+    
+    [ivc setTitle:[[sender titleLabel] text]];
+    
+    [[self navigationController] pushViewController:ivc animated:YES];
+}
+-(IBAction)didSelectCategoryADA:(id)sender{
+    
+    NSMutableArray* tempList = [[NSMutableArray alloc]init];
+    
+    ItemViewController* ivc = [[ItemViewController alloc] init];
+    for (int i = 0; i < [[DSItemStore sharedStore]allItems].count; i++) {
+        DSItem* temp = [[[DSItemStore sharedStore]allItems]objectAtIndex:i];
+        if ([temp.typeString isEqualToString:@"ADA"]) {
+            [tempList addObject:[[[DSItemStore sharedStore]allItems]objectAtIndex:i]];
+        }
+    }
+    ivc.tableList = tempList;
+    
+    
+    [ivc setTitle:[[sender titleLabel] text]];
+    
+    [[self navigationController] pushViewController:ivc animated:YES];
+}
+-(IBAction)didSelectCategoryParking:(id)sender{
+    
+    NSMutableArray* tempList = [[NSMutableArray alloc]init];
+    
+    ItemViewController* ivc = [[ItemViewController alloc] init];
+    for (int i = 0; i < [[DSItemStore sharedStore]allItems].count; i++) {
+        DSItem* temp = [[[DSItemStore sharedStore]allItems]objectAtIndex:i];
+        if ([temp.typeString isEqualToString:@"Parking"]) {
+            [tempList addObject:[[[DSItemStore sharedStore]allItems]objectAtIndex:i]];
+        }
+    }
+    ivc.tableList = tempList;
+    
     
     [ivc setTitle:[[sender titleLabel] text]];
     

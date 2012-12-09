@@ -12,10 +12,16 @@
 
 @interface MenuViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>{
     CLLocationManager* userLocationManager;
-    IBOutlet MKMapView* mapview;
-    
+    IBOutlet MKMapView* mapview;    
 }
 
--(IBAction)didSelectCategory:(id)sender;
+-(IBAction)didSelectCategoryBldg:(id)sender;
+-(IBAction)didSelectCategoryFood:(id)sender;
+-(IBAction)didSelectCategoryLabs:(id)sender;
+-(IBAction)didSelectCategoryFacilities:(id)sender;
+-(IBAction)didSelectCategoryStudying:(id)sender;
+-(IBAction)didSelectCategoryServices:(id)sender;
+-(IBAction)didSelectCategoryADA:(id)sender;
+-(IBAction)didSelectCategoryParking:(id)sender;
 -(IBAction)didSelectSettings:(id)sender;
 @end
