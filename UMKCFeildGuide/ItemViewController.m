@@ -84,7 +84,6 @@
         CLLocation* cellLocation = [[CLLocation alloc] initWithLatitude:[[tableList objectAtIndex:i] latitude] longitude:[[tableList objectAtIndex:i] longitude]];
         distance = [currentLoc distanceFromLocation:cellLocation];
         [[tableList objectAtIndex:i] setDistance: distance];
-        NSLog(@"lat:%f, lon:%f", [[tableList objectAtIndex:i] latitude], [[tableList objectAtIndex:i] longitude]);
     }
     
     NSArray* sortedArray = [tableList sortedArrayUsingComparator: ^(id a, id b){
@@ -141,10 +140,6 @@
     
 
     DSItem* p = [tableList objectAtIndex:[indexPath row]];
-  
-    
-//    [[cell textLabel] setText:[p name]];
-//    [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%0.1f m room: %@", p.distance/1000, [p roomName]]];
     
     [[cell textLabel] setText:[p name]];
     [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%0.1f m Building: %@", p.distance/1000, [p bldgName]]];

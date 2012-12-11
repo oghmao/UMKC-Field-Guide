@@ -31,8 +31,11 @@
         allItems = [[NSMutableArray alloc]init];
         [userLocationManager setDelegate:self];
     }
-        
-    NSXMLParser* parser = [[NSXMLParser alloc] initWithData:[[NSData alloc] initWithContentsOfFile:@"/Users/oghmao/Documents/Developer/UMKCFeildGuide/data.xml"]];
+    
+    NSString* filePath = [[NSBundle mainBundle] pathForResource:@"data"
+                                                         ofType:@"xml"];
+    
+    NSXMLParser* parser = [[NSXMLParser alloc] initWithData:[[NSData alloc] initWithContentsOfFile:filePath]];
     
     [parser setDelegate:self];
     
@@ -43,10 +46,10 @@
     
     BOOL success = [parser parse];
         
-    if(success)
-        NSLog(@"No Errors");
-    else
-        NSLog(@"Error Error Error!!!");
+//    if(success)
+//        NSLog(@"No Errors");
+//    else
+//        NSLog(@"Error Error Error!!!");
     
     return self;
 }
@@ -86,7 +89,7 @@
 didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI
  qualifiedName:(NSString *)qualifiedName attributes:(NSDictionary*)attributeDict {
     
-    NSLog(@"Started Element %@", elementName);
+//    NSLog(@"Started Element %@", elementName);
     element = [NSMutableString string];
           
 }
@@ -96,7 +99,7 @@ didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI
   namespaceURI:(NSString *)namespaceURI
  qualifiedName:(NSString *)qName {
     
-    NSLog(@"Found an element named: %@ with a value of: %@", elementName, element);
+//    NSLog(@"Found an element named: %@ with a value of: %@", elementName, element);
     
     if ([elementName isEqualToString:@"longitude"]){
         lon = [[NSString stringWithString:element] doubleValue];
@@ -116,7 +119,7 @@ didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI
         DSItem* p = [[DSItem alloc]initWithItemName:name lat:lat lon:lon bldg:bldg room:room type:type floor:floor];
         
         [allItems addObject:p];
-        NSLog(@"item added with name:%@, lat: %f, lon: %f, bldg: %@, room: %@, type: %@, floor: %i", name, lat, lon, bldg, room, type, floor);
+//        NSLog(@"item added with name:%@, lat: %f, lon: %f, bldg: %@, room: %@, type: %@, floor: %i", name, lat, lon, bldg, room, type, floor);
         
     }
           
