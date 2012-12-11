@@ -32,10 +32,11 @@
         [userLocationManager setDelegate:self];
     }
     
-    NSString* filePath = [[NSBundle mainBundle] pathForResource:@"data"
-                                                         ofType:@"xml"];
+//    NSString* filePath = [[NSBundle mainBundle] pathForResource:@"data" ofType:@"xml"];
+//    
+//    NSXMLParser* parser = [[NSXMLParser alloc] initWithData:[[NSData alloc] initWithContentsOfFile:filePath]];
     
-    NSXMLParser* parser = [[NSXMLParser alloc] initWithData:[[NSData alloc] initWithContentsOfFile:filePath]];
+    NSXMLParser* parser = [[NSXMLParser alloc] initWithContentsOfURL:[NSURL URLWithString:@"https://sites.google.com/site/umkcfieldguide/data.xml"]];
     
     [parser setDelegate:self];
     
